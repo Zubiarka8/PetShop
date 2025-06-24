@@ -1,0 +1,17 @@
+/* Botón hamburguesa */
+.navbar-toggler-icon {
+    filter: none;
+    background-image: url("data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* estilos para enlaces */
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(68, 187, 238) !important;
+}
+
+.transparent:hover {
+    background-color: transparent !important;
+    color: black;
+}
