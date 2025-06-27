@@ -8,7 +8,62 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <style>
-
+        /* Efectos de hover para las tarjetas */
+        .hover-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+        }
+        
+        .transition {
+            transition: all 0.3s ease;
+        }
+        
+        /* Mejoras en las tarjetas */
+        .card {
+            border-radius: 15px !important;
+            overflow: hidden;
+        }
+        
+        .card-img-top {
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        /* Estilos para los badges */
+        .badge {
+            font-weight: 600;
+            padding: 8px 12px;
+        }
+        
+        /* Mejoras en los botones */
+        .btn {
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Estilos para las secciones */
+        .bg-gradient-light {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        /* Animación para los iconos */
+        .bi {
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover .bi {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -64,260 +119,292 @@
 
 
 
-    <div class="container mt-5 ps-5">
-        <div class="row">
-
-            <div class="col-12">
-                
-                <h3 class="mb-5">Las mejores ofertas</h3>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-
-
-                    <!-- Descuentos Producto 1 -->
-                    <div class="col">
-                        <div class="card h-100">
-                            <a href="" class="text-black">
-                            <img src="../img/Perros/Huesito-Nayeco.jpg" class="card-img-top home-image" alt="Huesito Nayeco">
-                            <div class="card-body">
-                                <hr>
-                                <h5 class="card-title">Huesito Nayeco</h5>
-                                <p class="card-text">Juguete mordedor para perros de todas las edades.</p>
-                                <p class="mb-1">
-                                <span class="text-muted text-decoration-line-through">34.34€</span>
-                                <span class="text-success fw-bold ms-2">15.34€</span>
-                                </p>
-                            </div>
-                            </a>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <!-- Descuentos Producto 2 -->
-                    <div class="col">
-                        <div class="card h-100">
-                            <a href="" class="text-black">
-                            <img src="../img/Perros/Huesitos-Nayeco.jpg" class="card-img-top home-image" alt="Huesito Nayeco">
-                            <div class="card-body">
-                                <hr>
-                                <h5 class="card-title">Huesitos Nayeco</h5>
-                                <p class="card-text">Juguete mordedor para perros de todas las edades.</p>
-                                <p class="mb-1">
-                                <span class="text-muted text-decoration-line-through">34.34€</span>
-                                <span class="text-success fw-bold ms-2">15.34€</span>
-                                </p>
-                            </div>
-                            </a>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Descuentos Producto 3 -->
-                    <div class="col">
-                        <div class="card h-100">
-                            <a href="" class="text-black">
-                            <img src="../img/Perros/pienso-senior-mediumMaxi.jpg" class="card-img-top home-image" alt="pienso-senior-mediumMaxi">
-                            <div class="card-body">
-                                <hr>
-                                <h5 class="card-title">Pienso senior mediumMaxi 4KG</h5>
-                                <p class="card-text">Juguete mordedor para perros de todas las edades.</p>
-                                <p class="mb-1">
-                                    <span class="text-muted text-decoration-line-through">34.34€</span>
-                                    <span class="text-success fw-bold ms-2">15.34€</span>
-                                </p>
-                            </div>
-                            </a>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Descuentos Producto 4 -->
-                    <div class="col">
-                        <div class="card h-100">
-                            <a href="" class="text-black">
-                            <img src="../img/Perros/pienso-vegano-BenevoEnLata.jpg" class="card-img-top home-image" alt="pienso-vegano-BenevoEnLata">
-                            <div class="card-body ">
-                                <hr>
-                                <h5 class="card-title">pienso vegano BenevoEnLata</h5>
-                                <p class="card-text">Juguete mordedor para perros de todas las edades.</p>
-                                <p class="mb-1">
-                                <span class="text-muted text-decoration-line-through">34.34€</span>
-                                <span class="text-success fw-bold ms-2">15.34€</span>
-                                </p>
-                            </div>
-                            </a>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-5 ps-5">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-12">
-                <h3 class="mb-5 mt-5">Novedades</h3>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-
-                    <!-- Novedades Producto 1 -->
-                    <div class="col">
-                        <div class="card h-100 bor">
-                            <a href="" class="text-black">
-                            <img src="../img/Perros/Huesito-Nayeco.jpg" class="card-img-top home-image" alt="Huesito Nayeco">
-                            <span class="badge bg-success position-absolute top-0 start-0 m-2">Nuevo</span>
-                            <div class="card-body">
-                                <hr>
-                                <h5 class="card-title">Huesito Nayeco</h5>
-                                <p class="card-text">Juguete mordedor para perros de todas las edades.</p>
-                                <p class="mb-1">
-                                <span class="text-muted text-decoration-line-through">34.34€</span>
-                                <span class="text-success fw-bold ms-2">15.34€</span>
-                                </p>
+                <!-- Sección Las mejores ofertas -->
+                <div class="bg-light rounded-3 p-4 mb-5 shadow-sm">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-fire text-danger fs-1 me-3"></i>
+                        <h2 class="mb-0 text-primary fw-bold">🔥 Las mejores ofertas</h2>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                        <!-- Descuentos Producto 1 -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                                <div class="position-relative">
+                                    <img src="../img/Perros/Huesito-Nayeco.jpg" class="card-img-top home-image" alt="Huesito Nayeco">
+                                    <span class="badge bg-danger position-absolute top-0 end-0 m-2 fs-6">-55%</span>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark fw-bold">Huesito Nayeco</h5>
+                                        <p class="card-text text-muted">Juguete mordedor para perros de todas las edades.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-muted text-decoration-line-through me-2">34.34€</span>
+                                            <span class="text-success fw-bold fs-5">15.34€</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary w-100 fw-bold">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                </div>
                             </div>
-                            </a>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary">Agregar al carrito</button>
+                        </div>
+
+                        <!-- Descuentos Producto 2 -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                                <div class="position-relative">
+                                    <img src="../img/Perros/Huesitos-Nayeco.jpg" class="card-img-top home-image" alt="Huesito Nayeco">
+                                    <span class="badge bg-danger position-absolute top-0 end-0 m-2 fs-6">-55%</span>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark fw-bold">Huesitos Nayeco</h5>
+                                        <p class="card-text text-muted">Juguete mordedor para perros de todas las edades.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-muted text-decoration-line-through me-2">34.34€</span>
+                                            <span class="text-success fw-bold fs-5">15.34€</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary w-100 fw-bold">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Descuentos Producto 3 -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                                <div class="position-relative">
+                                    <img src="../img/Perros/pienso-senior-mediumMaxi.jpg" class="card-img-top home-image" alt="pienso-senior-mediumMaxi">
+                                    <span class="badge bg-danger position-absolute top-0 end-0 m-2 fs-6">-55%</span>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark fw-bold">Pienso senior mediumMaxi 4KG</h5>
+                                        <p class="card-text text-muted">Alimento premium para perros senior de tamaño mediano.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-muted text-decoration-line-through me-2">34.34€</span>
+                                            <span class="text-success fw-bold fs-5">15.34€</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary w-100 fw-bold">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Descuentos Producto 4 -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                                <div class="position-relative">
+                                    <img src="../img/Perros/pienso-vegano-BenevoEnLata.jpg" class="card-img-top home-image" alt="pienso-vegano-BenevoEnLata">
+                                    <span class="badge bg-danger position-absolute top-0 end-0 m-2 fs-6">-55%</span>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark fw-bold">Pienso vegano Benevo en lata</h5>
+                                        <p class="card-text text-muted">Alimento vegano premium para perros con necesidades especiales.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-muted text-decoration-line-through me-2">34.34€</span>
+                                            <span class="text-success fw-bold fs-5">15.34€</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-primary w-100 fw-bold">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    
-                    <!-- Novedades Producto 2 -->
-                    <div class="col">
-                        <div class="card h-100">
-                            <a href="" class="text-black">
-                            <span class="badge bg-success position-absolute top-0  start-0 m-2">Nuevo</span>
-                            <img src="../img/Perros/Huesitos-Nayeco.jpg" class="card-img-top home-image" alt="Huesito Nayeco">
-                            <div class="card-body">
-                                <hr>
-                                <h5 class="card-title">Huesitos Nayeco</h5>
-                                <p class="card-text">Juguete mordedor para perros de todas las edades.</p>
-                                <p class="mb-1">
-                                <span class="text-muted text-decoration-line-through">34.34€</span>
-                                <span class="text-success fw-bold ms-2">15.34€</span>
-                                </p>
-                            </div>
-                            </a>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Novedades Producto 3 -->
-                    <div class="col">
-                        <div class="card h-100">
-                            <a href="" class="text-black">
-                            <span class="badge bg-success position-absolute top-0 start-0 m-2">Nuevo</span>
-                            <img src="../img/Perros/pienso-senior-mediumMaxi.jpg" class="card-img-top home-image" alt="pienso-senior-mediumMaxi">
-                            <div class="card-body">
-                                <hr>
-                                <h5 class="card-title">Pienso senior mediumMaxi 4KG</h5>
-                                <p class="card-text">Juguete mordedor para perros de todas las edades.</p>
-                                <p class="mb-1">
-                                    <span class="text-muted text-decoration-line-through">34.34€</span>
-                                    <span class="text-success fw-bold ms-2">15.34€</span>
-                                </p>
-                            </div>
-                            </a>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Novedades Producto 4 -->
-                    <div class="col">
-                        <div class="card h-100">
-                            <a href="" class="text-black">
-                                                <span class="badge bg-success position-absolute top-0 start-0 m-2">Nuevo</span>
-                            <img src="../img/Perros/pienso-vegano-BenevoEnLata.jpg" class="card-img-top home-image" alt="pienso-vegano-BenevoEnLata">
-                            <div class="card-body">
-                                <hr>
-                                <h5 class="card-title">pienso-vegano-BenevoEnLata</h5>
-                                <p class="card-text">Juguete mordedor para perros de todas las edades.</p>
-                                <p class="mb-1">
-                                <span class="text-muted text-decoration-line-through">34.34€</span>
-                                <span class="text-success fw-bold ms-2">15.34€</span>
-                                </p>
-                            </div>
-                            </a>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container mt-5 ps-5">
-        <div class="row">
 
-            <div class="col-12 mb-5">
-                
-                <h3 class="mb-5 mt-5">Mas servicios</h3>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 d-flex justify-content-around">
-
-
-                    <!-- Descuentos Producto 1 -->
-                    <div class="col">
-                        <div class="card h-100">
-                            <a href="" class="text-black">
-                            <img src="../img/Otros/ServiciosPlus.png" class="card-img-top home-image" alt="Huesito Nayeco">
-                            <div class="card-body">
-                                <hr>
-                                <h5 class="card-title">PetShop plus</h5>
-                                <p class="card-text">Juguete mordedor para perros de todas las edades.</p>
-                                <p class="mb-1">
-                                <span class="text-muted text-decoration-line-through">34.34€</span>
-                                <span class="text-success fw-bold ms-2">15.34€</span>
-                                </p>
+                <!-- Sección Novedades -->
+                <div class="bg-gradient-light rounded-3 p-4 mb-5 shadow-sm" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-star-fill text-warning fs-1 me-3"></i>
+                        <h2 class="mb-0 text-dark fw-bold">⭐ Novedades</h2>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                        <!-- Novedades Producto 1 -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                                <div class="position-relative">
+                                    <img src="../img/Perros/Huesito-Nayeco.jpg" class="card-img-top home-image" alt="Huesito Nayeco">
+                                    <span class="badge bg-success position-absolute top-0 start-0 m-2 fs-6">
+                                        <i class="bi bi-sparkles me-1"></i>Nuevo
+                                    </span>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark fw-bold">Huesito Nayeco</h5>
+                                        <p class="card-text text-muted">Juguete mordedor para perros de todas las edades.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-muted text-decoration-line-through me-2">34.34€</span>
+                                            <span class="text-success fw-bold fs-5">15.34€</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-success w-100 fw-bold">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                </div>
                             </div>
-                            </a>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary">Agregar al carrito</button>
+                        </div>
+
+                        <!-- Novedades Producto 2 -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                                <div class="position-relative">
+                                    <img src="../img/Perros/Huesitos-Nayeco.jpg" class="card-img-top home-image" alt="Huesito Nayeco">
+                                    <span class="badge bg-success position-absolute top-0 start-0 m-2 fs-6">
+                                        <i class="bi bi-sparkles me-1"></i>Nuevo
+                                    </span>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark fw-bold">Huesitos Nayeco</h5>
+                                        <p class="card-text text-muted">Juguete mordedor para perros de todas las edades.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-muted text-decoration-line-through me-2">34.34€</span>
+                                            <span class="text-success fw-bold fs-5">15.34€</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-success w-100 fw-bold">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Novedades Producto 3 -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                                <div class="position-relative">
+                                    <img src="../img/Perros/pienso-senior-mediumMaxi.jpg" class="card-img-top home-image" alt="pienso-senior-mediumMaxi">
+                                    <span class="badge bg-success position-absolute top-0 start-0 m-2 fs-6">
+                                        <i class="bi bi-sparkles me-1"></i>Nuevo
+                                    </span>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark fw-bold">Pienso senior mediumMaxi 4KG</h5>
+                                        <p class="card-text text-muted">Alimento premium para perros senior de tamaño mediano.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-muted text-decoration-line-through me-2">34.34€</span>
+                                            <span class="text-success fw-bold fs-5">15.34€</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-success w-100 fw-bold">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Novedades Producto 4 -->
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                                <div class="position-relative">
+                                    <img src="../img/Perros/pienso-vegano-BenevoEnLata.jpg" class="card-img-top home-image" alt="pienso-vegano-BenevoEnLata">
+                                    <span class="badge bg-success position-absolute top-0 start-0 m-2 fs-6">
+                                        <i class="bi bi-sparkles me-1"></i>Nuevo
+                                    </span>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark fw-bold">Pienso vegano Benevo en lata</h5>
+                                        <p class="card-text text-muted">Alimento vegano premium para perros con necesidades especiales.</p>
+                                        <div class="d-flex align-items-center">
+                                            <span class="text-muted text-decoration-line-through me-2">34.34€</span>
+                                            <span class="text-success fw-bold fs-5">15.34€</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-success w-100 fw-bold">
+                                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    
-                    <!-- Descuentos Producto 2 -->
-                    <div class="col ">
-                        <div class="card h-100 ">
-                            <a href="" class="text-black">
-                            <img src="../img/Otros/Finanzas.jpg" class="card-img-top home-image" alt="Huesito Nayeco">
-                            <div class="card-body">
-                                <hr>
-                                <h5 class="card-title">Financiacion</h5>
-                                <p class="card-text">Juguete mordedor para perros de todas las edades.</p>
-                                <p class="mb-1">
-                                <span class="text-muted text-decoration-line-through">34.34€</span>
-                                <span class="text-success fw-bold ms-2">15.34€</span>
-                                </p>
-                            </div>
-                            </a>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary">Agregar al carrito</button>
+                <!-- Sección Más servicios -->
+                <div class="bg-primary bg-opacity-10 rounded-3 p-4 mb-5 shadow-sm">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-gear-fill text-primary fs-1 me-3"></i>
+                        <h2 class="mb-0 text-primary fw-bold">⚙️ Más servicios</h2>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+                        <!-- Servicio 1 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                                <div class="position-relative">
+                                    <img src="../img/Otros/ServiciosPlus.png" class="card-img-top home-image" alt="PetShop Plus">
+                                    <span class="badge bg-primary position-absolute top-0 end-0 m-2 fs-6">Premium</span>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title text-dark fw-bold">PetShop Plus</h5>
+                                        <p class="card-text text-muted">Acceso exclusivo a ofertas especiales, envío gratuito y atención premium.</p>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="text-muted text-decoration-line-through me-2">34.34€</span>
+                                            <span class="text-primary fw-bold fs-5">15.34€</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-outline-primary w-100 fw-bold">
+                                        <i class="bi bi-plus-circle me-2"></i>Suscribirse
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>                   
 
+                        <!-- Servicio 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                                <div class="position-relative">
+                                    <img src="../img/Otros/Finanzas.jpg" class="card-img-top home-image" alt="Financiación">
+                                    <span class="badge bg-info position-absolute top-0 end-0 m-2 fs-6">Flexible</span>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title text-dark fw-bold">Financiación</h5>
+                                        <p class="card-text text-muted">Opciones de pago flexibles para que puedas cuidar de tu mascota sin preocupaciones.</p>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <span class="text-muted text-decoration-line-through me-2">34.34€</span>
+                                            <span class="text-info fw-bold fs-5">15.34€</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-outline-info w-100 fw-bold">
+                                        <i class="bi bi-credit-card me-2"></i>Consultar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
