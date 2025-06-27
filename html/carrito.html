@@ -10,9 +10,9 @@
 </head>
 <body>
     <!-- Navbar  -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-lg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); backdrop-filter: blur(10px);">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); backdrop-filter: blur(10px);">
         <div class="container">
-            <a href="#" class="navbar-brand d-flex align-items-center gap-2 fs-2 fw-bold text-white">
+            <a href="#" class="navbar-brand d-flex align-items-center gap-2 fs-2 fw-bold text-primary">
                 <i class="bi bi-heart-fill text-danger"></i>PetShop
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -21,26 +21,26 @@
             <div class="collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav mx-auto gap-3">
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Inicio</a>
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Perros</a>
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Perros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Gatos</a>
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Gatos</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center gap-4">
                     <form class="search-form d-none d-md-block">
                         <div class="input-group">
                             <input type="search" class="form-control border-0 rounded-start-pill shadow-sm" placeholder="Buscar productos..." aria-label="Buscar" style="background: rgba(255,255,255,0.9);">
-                            <button class="btn btn-light rounded-end-pill shadow-sm" type="submit">
-                                <i class="bi bi-search text-primary"></i>
+                            <button class="btn btn-primary rounded-end-pill shadow-sm" type="submit">
+                                <i class="bi bi-search text-white"></i>
                             </button>
                         </div>
                     </form>
                     <div class="dropdown">
-                        <button class="btn btn-outline-light dropdown-toggle fw-semibold rounded-pill px-4" type="button" data-bs-toggle="dropdown" style="border: 2px solid rgba(255,255,255,0.8);">
+                        <button class="btn btn-outline-primary dropdown-toggle fw-semibold rounded-pill px-4" type="button" data-bs-toggle="dropdown" style="border: 2px solid var(--primary-color);">
                             <i class="bi bi-person-circle me-2"></i>Mi cuenta
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0">
@@ -48,8 +48,8 @@
                             <li><a class="dropdown-item" href="crear-cuenta2.html"><i class="bi bi-person-plus me-2"></i>Crear cuenta</a></li>
                         </ul>
                     </div>
-                    <button class="btn btn-light position-relative fw-semibold rounded-pill px-4 shadow-sm" id="cartButton" style="background: rgba(255,255,255,0.95);">
-                        <i class="bi bi-cart3 me-2 text-primary"></i>Carrito
+                    <button class="btn btn-primary position-relative fw-semibold rounded-pill px-4 shadow-sm" id="cartButton">
+                        <i class="bi bi-cart3 me-2 text-white"></i>Carrito
                         <span class="position-absolute top-0 start-100 translate-middle badge cart-badge bg-danger rounded-pill">
                             0
                         </span>

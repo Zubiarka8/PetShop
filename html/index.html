@@ -11,9 +11,9 @@
 </head>
 <body>
     <!-- Navbar  -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-lg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); backdrop-filter: blur(10px);">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); backdrop-filter: blur(10px);">
         <div class="container">
-            <a href="#" class="navbar-brand d-flex align-items-center gap-2 fs-2 fw-bold text-white">
+            <a href="#" class="navbar-brand d-flex align-items-center gap-2 fs-2 fw-bold text-primary">
                 <i class="bi bi-heart-fill text-danger"></i>PetShop
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -22,26 +22,26 @@
             <div class="collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav mx-auto gap-3">
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Inicio</a>
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Perros</a>
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Perros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Gatos</a>
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Gatos</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center gap-4">
                     <form class="search-form d-none d-md-block">
                         <div class="input-group">
                             <input type="search" class="form-control border-0 rounded-start-pill shadow-sm" placeholder="Buscar productos..." aria-label="Buscar" style="background: rgba(255,255,255,0.9);">
-                            <button class="btn btn-light rounded-end-pill shadow-sm" type="submit">
-                                <i class="bi bi-search text-primary"></i>
+                            <button class="btn btn-primary rounded-end-pill shadow-sm" type="submit">
+                                <i class="bi bi-search text-white"></i>
                             </button>
                         </div>
                     </form>
                     <div class="dropdown">
-                        <button class="btn btn-outline-light dropdown-toggle fw-semibold rounded-pill px-4" type="button" data-bs-toggle="dropdown" style="border: 2px solid rgba(255,255,255,0.8);">
+                        <button class="btn btn-outline-primary dropdown-toggle fw-semibold rounded-pill px-4" type="button" data-bs-toggle="dropdown" style="border: 2px solid var(--primary-color);">
                             <i class="bi bi-person-circle me-2"></i>Mi cuenta
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0">
@@ -49,8 +49,8 @@
                             <li><a class="dropdown-item" href="crear-cuenta2.html"><i class="bi bi-person-plus me-2"></i>Crear cuenta</a></li>
                         </ul>
                     </div>
-                    <button class="btn btn-light position-relative fw-semibold rounded-pill px-4 shadow-sm" id="cartButton" style="background: rgba(255,255,255,0.95);">
-                        <i class="bi bi-cart3 me-2 text-primary"></i>Carrito
+                    <button class="btn btn-primary position-relative fw-semibold rounded-pill px-4 shadow-sm" id="cartButton">
+                        <i class="bi bi-cart3 me-2 text-white"></i>Carrito
                         <span class="position-absolute top-0 start-100 translate-middle badge cart-badge bg-danger rounded-pill">
                             0
                         </span>
@@ -88,7 +88,7 @@
                 <div class="col fade-in-up">
                     <div class="card h-100">
                         <div class="position-relative">
-                            <img src="../img/Perros/Huesito-Nayeco.jpg" class="card-img-top" alt="Hueso Dental Perro">
+                            <img src="../img/Perros/Huesito-Nayeco.jpg" class="card-img-top img-fluid" alt="Hueso Dental Perro" loading="lazy">
                             <span class="badge bg-danger position-absolute top-0 start-0 m-3">-30%</span>
                         </div>
                         <div class="card-body d-flex flex-column">
@@ -110,7 +110,7 @@
                 <div class="col fade-in-up">
                     <div class="card h-100">
                         <div class="position-relative">
-                            <img src="../img/Perros/Pelota-Nayeco.jpg" class="card-img-top" alt="Pelota Nayeco">
+                            <img src="../img/Perros/Pelota-Nayeco.jpg" class="card-img-top img-fluid" alt="Pelota Nayeco" loading="lazy">
                             <span class="badge bg-danger position-absolute top-0 start-0 m-3">-20%</span>
                         </div>
                         <div class="card-body d-flex flex-column">
@@ -132,7 +132,7 @@
                 <div class="col fade-in-up">
                     <div class="card h-100">
                         <div class="position-relative">
-                            <img src="../img/Perros/pienso-optimaNova.jpg" class="card-img-top" alt="Pienso Optima Nova">
+                            <img src="../img/Perros/pienso-optimaNova.jpg" class="card-img-top img-fluid" alt="Pienso Optima Nova" loading="lazy">
                             <span class="badge bg-danger position-absolute top-0 start-0 m-3">-15%</span>
                         </div>
                         <div class="card-body d-flex flex-column">
@@ -154,7 +154,7 @@
                 <div class="col fade-in-up">
                     <div class="card h-100">
                         <div class="position-relative">
-                            <img src="../img/Gatos/juguete-raton.webp" class="card-img-top" alt="Juguete Ratón Gato">
+                            <img src="../img/Gatos/juguete-raton.webp" class="card-img-top img-fluid" alt="Juguete Ratón Gato" loading="lazy">
                             <span class="badge bg-danger position-absolute top-0 start-0 m-3">-10%</span>
                         </div>
                         <div class="card-body d-flex flex-column">
@@ -183,7 +183,7 @@
                 <div class="col fade-in-up">
                     <div class="card h-100">
                         <div class="position-relative">
-                            <img src="../img/Perros/pienso-senior-ultiima.jpg" class="card-img-top" alt="Pienso Senior Ultima">
+                            <img src="../img/Perros/pienso-senior-ultiima.jpg" class="card-img-top img-fluid" alt="Pienso Senior Ultima" loading="lazy">
                             <span class="badge bg-success position-absolute top-0 start-0 m-3">Nuevo</span>
                         </div>
                         <div class="card-body d-flex flex-column">
@@ -204,7 +204,7 @@
                 <div class="col fade-in-up">
                     <div class="card h-100">
                         <div class="position-relative">
-                            <img src="../img/Perros/pienso-vegano-Benevo.jpg" class="card-img-top" alt="Pienso Vegano Benevo">
+                            <img src="../img/Perros/pienso-vegano-Benevo.jpg" class="card-img-top img-fluid" alt="Pienso Vegano Benevo" loading="lazy">
                             <span class="badge bg-success position-absolute top-0 start-0 m-3">Nuevo</span>
                         </div>
                         <div class="card-body d-flex flex-column">
@@ -225,7 +225,7 @@
                 <div class="col fade-in-up">
                     <div class="card h-100">
                         <div class="position-relative">
-                            <img src="../img/Perros/Huesitos-Nayeco.jpg" class="card-img-top" alt="Pack Huesitos Nayeco">
+                            <img src="../img/Perros/Huesitos-Nayeco.jpg" class="card-img-top img-fluid" alt="Pack Huesitos Nayeco" loading="lazy">
                             <span class="badge bg-success position-absolute top-0 start-0 m-3">Nuevo</span>
                         </div>
                         <div class="card-body d-flex flex-column">
@@ -246,15 +246,15 @@
                 <div class="col fade-in-up">
                     <div class="card h-100">
                         <div class="position-relative">
-                            <img src="../img/Otros/ServiciosPlus.png" class="card-img-top" alt="Fuente Agua Gatos">
+                            <img src="../img/Gatos/latas-monoproteicas-SaborMelon.webp" class="card-img-top img-fluid" alt="Comida Húmeda Sabor Melón" loading="lazy">
                             <span class="badge bg-success position-absolute top-0 start-0 m-3">Nuevo</span>
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Fuente de Agua para Gatos</h5>
-                            <p class="card-text">Fuente automática que fomenta la hidratación y el juego en gatos.</p>
+                            <h5 class="card-title">Comida Húmeda Sabor Melón</h5>
+                            <p class="card-text">Alimento húmedo premium con sabor refrescante a melón, ideal para gatos exigentes.</p>
                             <div class="mt-auto">
                                 <div class="mb-3">
-                                    <span class="price-new ms-2">24.99€</span>
+                                    <span class="price-new ms-2">3.99€</span>
                                 </div>
                                 <button class="btn btn-primary w-100">
                                     <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
@@ -270,16 +270,16 @@
         <section class="mb-5">
             <h2 class="section-title">🛠️ Servicios Adicionales</h2>
             <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
-                <!-- Servicio 1 -->
-                <div class="col col-lg-4 fade-in-up">
+                <!-- Servicio 1: PetShop Plus -->
+                <div class="col col-lg-6 fade-in-up">
                     <div class="card h-100">
                         <div class="position-relative">
-                            <img src="../img/Otros/ServiciosPlus.png" class="card-img-top" alt="PetShop Plus">
+                            <img src="../img/Otros/ServiciosPlus.png" class="card-img-top img-fluid" alt="PetShop Plus" loading="lazy">
                             <span class="badge bg-primary position-absolute top-0 start-0 m-3">Premium</span>
                         </div>
                         <div class="card-body d-flex flex-column text-center">
                             <h5 class="card-title">PetShop Plus</h5>
-                            <p class="card-text">Acceso exclusivo a productos premium, envío gratuito y descuentos especiales.</p>
+                            <p class="card-text">Acceso exclusivo a productos premium, envío gratuito y descuentos especiales para miembros Plus.</p>
                             <div class="mt-auto">
                                 <button class="btn btn-primary w-100">
                                     <i class="bi bi-star-fill me-2"></i>Suscribirse
@@ -288,17 +288,16 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Servicio 2 -->
-                <div class="col col-lg-4 fade-in-up">
+                <!-- Servicio 2: Financiación -->
+                <div class="col col-lg-6 fade-in-up">
                     <div class="card h-100">
                         <div class="position-relative">
-                            <img src="../img/Otros/Finanzas.jpg" class="card-img-top" alt="Financiación">
+                            <img src="../img/Otros/Finanzas.jpg" class="card-img-top img-fluid" alt="Financiación" loading="lazy">
                             <span class="badge bg-warning position-absolute top-0 start-0 m-3">Financiado</span>
                         </div>
                         <div class="card-body d-flex flex-column text-center">
-                            <h5 class="card-title">Financiación Flexible</h5>
-                            <p class="card-text">Opciones de pago a plazos sin intereses para compras superiores a 50€.</p>
+                            <h5 class="card-title">Opción de Financiación</h5>
+                            <p class="card-text">Compra ahora y paga en cómodos plazos sin intereses para pedidos superiores a 50€.</p>
                             <div class="mt-auto">
                                 <button class="btn btn-primary w-100">
                                     <i class="bi bi-credit-card me-2"></i>Ver opciones
