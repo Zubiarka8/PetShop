@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - PetShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-lg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); backdrop-filter: blur(10px);">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center gap-2 fs-2 fw-bold text-white">
+                <i class="bi bi-heart-fill text-danger"></i>PetShop
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Perros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Gatos</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-4">
+                    <form class="search-form d-none d-md-block">
+                        <div class="input-group">
+                            <input type="search" class="form-control border-0 rounded-start-pill shadow-sm" placeholder="Buscar productos..." aria-label="Buscar" style="background: rgba(255,255,255,0.9);">
+                            <button class="btn btn-light rounded-end-pill shadow-sm" type="submit">
+                                <i class="bi bi-search text-primary"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle fw-semibold rounded-pill px-4" type="button" data-bs-toggle="dropdown" style="border: 2px solid rgba(255,255,255,0.8);">
+                            <i class="bi bi-person-circle me-2"></i>Mi cuenta
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0">
+                            <li><a class="dropdown-item" href="iniciar-sesion2.html"><i class="bi bi-box-arrow-in-right me-2"></i>Iniciar sesión</a></li>
+                            <li><a class="dropdown-item" href="crear-cuenta2.html"><i class="bi bi-person-plus me-2"></i>Crear cuenta</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-light position-relative fw-semibold rounded-pill px-4 shadow-sm" id="cartButton" style="background: rgba(255,255,255,0.95);">
+                        <i class="bi bi-cart3 me-2 text-primary"></i>Carrito
+                        <span class="position-absolute top-0 start-100 translate-middle badge cart-badge bg-danger rounded-pill">
+                            0
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="section-title mb-4">
+                    <i class="bi bi-cart3 me-2"></i>Mi Carrito de Compras
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Productos en la cesta -->
+            <div class="col-lg-8 mb-4">
+                <div id="cartItems"></div>
+                <div id="emptyCart" class="text-center py-5" style="display: none;">
+                    <i class="bi bi-cart-x display-1 text-muted mb-3"></i>
+                    <h3 class="text-muted">Tu carrito está vacío</h3>
+                    <p class="text-muted mb-4">¡Agrega algunos productos para comenzar a comprar!</p>
+                    <a href="index.html" class="btn btn-primary btn-lg">
+                        <i class="bi bi-shop me-2"></i>Ir a la tienda
+                    </a>
+                </div>
+            </div>
+            <!-- Resumen de compra -->
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">
+                            <i class="bi bi-receipt me-2"></i>Resumen de Compra
+                        </h4>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span><i class="bi bi-box me-2"></i>Productos:</span>
+                            <span id="totalItems">0</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span><i class="bi bi-calculator me-2"></i>Subtotal:</span>
+                            <span id="subtotal">0.00€</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span><i class="bi bi-truck me-2"></i>Envío:</span>
+                            <span id="shipping">Gratis</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3" id="shippingInfo">
+                            <small class="text-muted"><i class="bi bi-info-circle me-2"></i>Envío gratuito para pedidos ≥ 50€</small>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between mb-4">
+                            <strong><i class="bi bi-credit-card me-2"></i>Total:</strong>
+                            <strong id="totalPrice">0.00€</strong>
+                        </div>
+                        <div id="summaryDetails"></div>
+                        <div class="d-grid gap-3">
+                            <button class="btn btn-primary btn-lg" id="checkoutBtn" disabled>
+                                <i class="bi bi-credit-card me-2"></i>Proceder al Pago
+                            </button>
+                            <button class="btn btn-outline-secondary" id="clearCartBtn">
+                                <i class="bi bi-trash me-2"></i>Vaciar Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer mejorado -->
+    <footer class="pt-5 pb-3 bg-dark text-white mt-5 border-top border-3 border-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Información</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-person me-2"></i>Mi cuenta</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-credit-card me-2"></i>Formas de pago</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-truck me-2"></i>Gastos de envío</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-arrow-return-left me-2"></i>Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-share me-2"></i>Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://es-es.facebook.com/" class="social-link text-white-50">
+                                <i class="bi bi-facebook me-2 text-primary"></i>Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" class="social-link text-white-50">
+                                <i class="bi bi-instagram me-2 text-danger"></i>Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/" class="social-link text-white-50">
+                                <i class="bi bi-twitter me-2 text-info"></i>Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" class="social-link text-white-50">
+                                <i class="bi bi-youtube me-2 text-danger"></i>YouTube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-building me-2"></i>Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-people me-2"></i>Quiénes somos</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-award me-2"></i>Nuestras marcas</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-shield-check me-2"></i>Aviso legal</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-lock me-2"></i>Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center border-top border-secondary pt-4 mt-4">
+                <p class="mb-0">
+                    <i class="bi bi-heart-fill text-danger me-1"></i>
+                    &copy; <span id="year"></span> PetShop. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateYear();
+            renderCart();
+        });
+
+        function renderCart() {
+            const cartManager = window.CartUtils.getCart();
+            const cartItems = cartManager.getCartItems();
+            const cartContainer = document.getElementById('cartItems');
+            const emptyCart = document.getElementById('emptyCart');
+            
+            if (cartItems.length === 0) {
+                cartContainer.innerHTML = '';
+                emptyCart.style.display = 'block';
+                updateSummary(0, 0, 0, false);
+                return;
+            }
+            
+            emptyCart.style.display = 'none';
+            cartContainer.innerHTML = cartItems.map((item, idx) => `
+                <div class="card mb-3 fade-in-up" style="animation-delay:${idx * 0.1}s">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-3 col-md-2 text-center">
+                                <img src="${item.image}" alt="${item.name}" class="img-fluid rounded">
+                            </div>
+                            <div class="col-9 col-md-4">
+                                <h5 class="card-title mb-2">${item.name}</h5>
+                                <p class="text-muted mb-1"><i class="bi bi-tag me-1"></i>Precio: ${item.price}</p>
+                                <p class="text-success mb-0 fw-bold"><i class="bi bi-calculator me-1"></i>Total: ${(parseFloat(item.price.replace('€', '').replace(',', '.')) * item.quantity).toFixed(2)}€</p>
+                            </div>
+                            <div class="col-12 col-md-3 mt-2 mt-md-0">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity('${item.id}', ${item.quantity - 1})">
+                                        <i class="bi bi-dash"></i>
+                                    </button>
+                                    <input type="number" class="form-control mx-2" style="width: 60px;" value="${item.quantity}" min="1" onchange="updateQuantity('${item.id}', this.value)">
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity('${item.id}', ${item.quantity + 1})">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-2 text-center mt-2 mt-md-0">
+                                <h6 class="mb-0 fw-bold text-primary">${(parseFloat(item.price.replace('€', '').replace(',', '.')) * item.quantity).toFixed(2)}€</h6>
+                                <small class="text-muted">${item.quantity} ${item.quantity === 1 ? 'unidad' : 'unidades'}</small>
+                            </div>
+                            <div class="col-6 col-md-1 text-center mt-2 mt-md-0">
+                                <button class="btn btn-outline-danger btn-sm" onclick="removeItem('${item.id}')">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            updateSummary(cartManager.getTotalItems(), cartManager.getTotalPrice(), cartManager.getFinalTotal(), cartManager.isUserPremium());
+        }
+
+        function updateQuantity(productId, newQuantity) {
+            window.CartUtils.getCart().updateQuantity(productId, parseInt(newQuantity));
+            renderCart();
+        }
+
+        function removeItem(productId) {
+            window.CartUtils.getCart().removeFromCart(productId);
+            renderCart();
+        }
+
+        function updateSummary(totalItems, subtotal, finalTotal, isPremium) {
+            document.getElementById('totalItems').textContent = totalItems;
+            document.getElementById('subtotal').textContent = subtotal.toFixed(2) + '€';
+            document.getElementById('totalPrice').textContent = finalTotal.toFixed(2) + '€';
+            document.getElementById('checkoutBtn').disabled = totalItems === 0;
+            
+            const shipping = subtotal >= 50 || isPremium ? 'Gratis' : '4.99€';
+            document.getElementById('shipping').textContent = shipping;
+            
+            const shippingInfo = document.getElementById('shippingInfo');
+            if (isPremium) {
+                shippingInfo.innerHTML = '<small class="text-warning"><i class="bi bi-star-fill me-2"></i>Usuario Premium - Envío gratuito</small>';
+            } else if (subtotal >= 50) {
+                shippingInfo.innerHTML = '<small class="text-success"><i class="bi bi-check-circle me-2"></i>¡Envío gratuito! Pedido ≥ 50€</small>';
+            } else {
+                const remaining = (50 - subtotal).toFixed(2);
+                shippingInfo.innerHTML = `<small class="text-info"><i class="bi bi-info-circle me-2"></i>Agrega ${remaining}€ más para envío gratuito</small>`;
+            }
+        }
+
+        document.getElementById('clearCartBtn').addEventListener('click', function() {
+            if (confirm('¿Estás seguro de que quieres vaciar el carrito?')) {
+                window.CartUtils.getCart().clearCart();
+                renderCart();
+            }
+        });
+
+        document.getElementById('checkoutBtn').addEventListener('click', function() {
+            alert('Procediendo el pago...');
+        });
+    </script>
+</body>
+</html> 
