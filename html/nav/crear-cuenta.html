@@ -10,48 +10,50 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); backdrop-filter: blur(10px);">
         <div class="container">
-            <a href="#" class="navbar-brand">
-                <i class="bi bi-heart-fill me-2"></i>PetShop
+            <a href="../index.html" class="navbar-brand d-flex align-items-center gap-2 fs-2 fw-bold text-primary">
+                <i class="bi bi-heart-fill text-danger"></i>PetShop
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav mx-auto gap-3">
                     <li class="nav-item">
-                        <a class="nav-link" href="index copy.html">Inicio</a>
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="../index.html" style="transition: all 0.3s ease;">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Perros</a>
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="perro.html" style="transition: all 0.3s ease;">Perros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gatos</a>
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="gato.html" style="transition: all 0.3s ease;">Gatos</a>
                     </li>
                 </ul>
-                <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-4">
                     <form class="search-form d-none d-md-block">
                         <div class="input-group">
-                            <input type="search" class="form-control" placeholder="Buscar productos..." aria-label="Buscar">
-                            <button class="btn btn-primary" type="submit">
-                                <i class="bi bi-search"></i>
+                            <input type="search" class="form-control border-0 rounded-start-pill shadow-sm" placeholder="Buscar productos..." aria-label="Buscar" style="background: rgba(255,255,255,0.9);">
+                            <button class="btn btn-primary rounded-end-pill shadow-sm" type="submit">
+                                <i class="bi bi-search text-white"></i>
                             </button>
                         </div>
                     </form>
                     <div class="dropdown">
-                        <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            <i class="bi bi-person-circle me-1"></i>Mi cuenta
+                        <button class="btn btn-outline-primary dropdown-toggle fw-semibold rounded-pill px-4" type="button" data-bs-toggle="dropdown" style="border: 2px solid var(--primary-color);">
+                            <i class="bi bi-person-circle me-2"></i>Mi cuenta
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="iniciar-sesion2.html"><i class="bi bi-box-arrow-in-right me-2"></i>Iniciar sesión</a></li>
-                            <li><a class="dropdown-item" href="crear-cuenta2.html"><i class="bi bi-person-plus me-2"></i>Crear cuenta</a></li>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0">
+                            <li><a class="dropdown-item" href="iniciar-sesion.html"><i class="bi bi-box-arrow-in-right me-2"></i>Iniciar sesión</a></li>
+                            <li><a class="dropdown-item" href="crear-cuenta.html"><i class="bi bi-person-plus me-2"></i>Crear cuenta</a></li>
                         </ul>
                     </div>
-                    <button class="btn btn-primary position-relative" id="cartButton">
-                        <i class="bi bi-cart3 me-1"></i>Carrito
-                        <span class="position-absolute top-0 start-100 translate-middle badge cart-badge">0</span>
-                    </button>
+                    <a href="carrito.html" class="btn btn-primary position-relative fw-semibold rounded-pill px-4 shadow-sm text-decoration-none" id="cartButton">
+                        <i class="bi bi-cart3 me-2 text-white"></i>Carrito
+                        <span class="position-absolute top-0 start-100 translate-middle badge cart-badge bg-danger rounded-pill">
+                            0
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -83,54 +85,55 @@
                 <button type="submit" class="btn btn-primary w-100">Crear cuenta</button>
             </form>
             <div class="text-center mt-3">
-                <a href="iniciar-sesion2.html">¿Ya tienes cuenta? Inicia sesión</a>
+                <a href="iniciar-sesion.html">¿Ya tienes cuenta? Inicia sesión</a>
             </div>
         </div>
     </div>
-    <footer class="pt-5 pb-3 mt-5">
+    <!-- Footer mejorado -->
+    <footer class="pt-5 pb-3 bg-dark text-white mt-5 border-top border-3 border-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h5><i class="bi bi-info-circle me-2"></i>Información</h5>
+                    <h5 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Información</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="social-link"><i class="bi bi-person me-2"></i>Mi cuenta</a></li>
-                        <li><a href="#" class="social-link"><i class="bi bi-credit-card me-2"></i>Formas de pago</a></li>
-                        <li><a href="#" class="social-link"><i class="bi bi-truck me-2"></i>Gastos de envío</a></li>
-                        <li><a href="#" class="social-link"><i class="bi bi-arrow-return-left me-2"></i>Devoluciones</a></li>
+                        <li><a href="carrito.html" class="social-link text-white-50"><i class="bi bi-person me-2"></i>Mi cuenta</a></li>
+                        <li><a href="../footer/formas-pago.html" class="social-link text-white-50"><i class="bi bi-credit-card me-2"></i>Formas de pago</a></li>
+                        <li><a href="../footer/gastos-envio.html" class="social-link text-white-50"><i class="bi bi-truck me-2"></i>Gastos de envío</a></li>
+                        <li><a href="../footer/devoluciones.html" class="social-link text-white-50"><i class="bi bi-arrow-return-left me-2"></i>Devoluciones</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h5><i class="bi bi-share me-2"></i>Redes Sociales</h5>
+                    <h5 class="fw-bold mb-3"><i class="bi bi-share me-2"></i>Redes Sociales</h5>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="https://es-es.facebook.com/" class="social-link">
+                            <a href="https://es-es.facebook.com/" class="social-link text-white-50">
                                 <i class="bi bi-facebook me-2 text-primary"></i>Facebook
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/" class="social-link">
+                            <a href="https://www.instagram.com/" class="social-link text-white-50">
                                 <i class="bi bi-instagram me-2 text-danger"></i>Instagram
                             </a>
                         </li>
                         <li>
-                            <a href="https://x.com/" class="social-link">
+                            <a href="https://x.com/" class="social-link text-white-50">
                                 <i class="bi bi-twitter me-2 text-info"></i>Twitter
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/" class="social-link">
+                            <a href="https://www.youtube.com/" class="social-link text-white-50">
                                 <i class="bi bi-youtube me-2 text-danger"></i>YouTube
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h5><i class="bi bi-building me-2"></i>Empresa</h5>
+                    <h5 class="fw-bold mb-3"><i class="bi bi-building me-2"></i>Empresa</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="social-link"><i class="bi bi-people me-2"></i>Quiénes somos</a></li>
-                        <li><a href="#" class="social-link"><i class="bi bi-award me-2"></i>Nuestras marcas</a></li>
-                        <li><a href="#" class="social-link"><i class="bi bi-shield-check me-2"></i>Aviso legal</a></li>
-                        <li><a href="#" class="social-link"><i class="bi bi-lock me-2"></i>Privacidad</a></li>
+                        <li><a href="../footer/quienes-somos.html" class="social-link text-white-50"><i class="bi bi-people me-2"></i>Quiénes somos</a></li>
+                        <li><a href="../footer/nuestras-marcas.html" class="social-link text-white-50"><i class="bi bi-award me-2"></i>Nuestras marcas</a></li>
+                        <li><a href="../footer/privacidad.html" class="social-link text-white-50"><i class="bi bi-shield-check me-2"></i>Aviso legal</a></li>
+                        <li><a href="../footer/privacidad.html" class="social-link text-white-50"><i class="bi bi-lock me-2"></i>Privacidad</a></li>
                     </ul>
                 </div>
             </div>

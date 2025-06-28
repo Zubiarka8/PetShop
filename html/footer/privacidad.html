@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - PetShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); backdrop-filter: blur(10px);">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center gap-2 fs-2 fw-bold text-primary">
+                <i class="bi bi-heart-fill text-danger"></i>PetShop
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="index.html" style="transition: all 0.3s ease;">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Perros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="#" style="transition: all 0.3s ease;">Gatos</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-4">
+                    <form class="search-form d-none d-md-block">
+                        <div class="input-group">
+                            <input type="search" class="form-control border-0 rounded-start-pill shadow-sm" placeholder="Buscar productos..." aria-label="Buscar" style="background: rgba(255,255,255,0.9);">
+                            <button class="btn btn-primary rounded-end-pill shadow-sm" type="submit">
+                                <i class="bi bi-search text-white"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle fw-semibold rounded-pill px-4" type="button" data-bs-toggle="dropdown" style="border: 2px solid var(--primary-color);">
+                            <i class="bi bi-person-circle me-2"></i>Mi cuenta
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0">
+                            <li><a class="dropdown-item" href="iniciar-sesion2.html"><i class="bi bi-box-arrow-in-right me-2"></i>Iniciar sesión</a></li>
+                            <li><a class="dropdown-item" href="crear-cuenta2.html"><i class="bi bi-person-plus me-2"></i>Crear cuenta</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary position-relative fw-semibold rounded-pill px-4 shadow-sm" id="cartButton">
+                        <i class="bi bi-cart3 me-2 text-white"></i>Carrito
+                        <span class="position-absolute top-0 start-100 translate-middle badge cart-badge bg-danger rounded-pill">
+                            0
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container my-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h1 class="fw-bold mb-4 mt-5 text-center">
+                    <i class="bi bi-lock text-primary me-2"></i>Política de Privacidad
+                </h1>
+                
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <p class="text-muted text-center mb-4">Última actualización: <span id="fecha-actualizacion"></span></p>
+                        
+                        <!-- Introducción -->
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-info-circle me-2"></i>1. Introducción
+                            </h2>
+                            <p>En PetShop S.L. nos tomamos muy en serio la protección de sus datos personales. Esta Política de Privacidad explica cómo recopilamos, utilizamos, almacenamos y protegemos su información personal cuando utiliza nuestro sitio web y servicios.</p>
+                            <p>Esta política cumple con el Reglamento General de Protección de Datos (RGPD) de la Unión Europea y la Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).</p>
+                        </section>
+
+                        <!-- Responsable del tratamiento -->
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-building me-2"></i>2. Responsable del tratamiento
+                            </h2>
+                            <p>Sus datos personales serán tratados por:</p>
+                            <ul class="list-unstyled ms-3">
+                                <li><strong>Denominación social:</strong> PetShop S.L.</li>
+                                <li><strong>NIF/CIF:</strong> B12345678</li>
+                                <li><strong>Domicilio:</strong> Calle de las Mascotas, 123, 28001 Madrid, España</li>
+                                <li><strong>Email:</strong> privacidad@petshop.es</li>
+                                <li><strong>Teléfono:</strong> +34 91 123 45 67</li>
+                            </ul>
+                        </section>
+
+                        <!-- Datos que recopilamos -->
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-database me-2"></i>3. Datos que recopilamos
+                            </h2>
+                            <p>Recopilamos los siguientes tipos de información:</p>
+                            
+                            <h3 class="h5 mt-4 mb-3">3.1 Datos de identificación personal</h3>
+                            <ul class="ms-3">
+                                <li>Nombre y apellidos</li>
+                                <li>Dirección de correo electrónico</li>
+                                <li>Número de teléfono</li>
+                                <li>Dirección postal</li>
+                                <li>DNI/NIE (para facturación)</li>
+                            </ul>
+                            
+                            <h3 class="h5 mt-4 mb-3">3.2 Datos de navegación</h3>
+                            <ul class="ms-3">
+                                <li>Dirección IP</li>
+                                <li>Tipo de navegador</li>
+                                <li>Sistema operativo</li>
+                                <li>Páginas visitadas</li>
+                                <li>Tiempo de permanencia</li>
+                                <li>Cookies y tecnologías similares</li>
+                            </ul>
+                            
+                            <h3 class="h5 mt-4 mb-3">3.3 Datos de compra</h3>
+                            <ul class="ms-3">
+                                <li>Historial de pedidos</li>
+                                <li>Productos comprados</li>
+                                <li>Información de pago (procesada de forma segura)</li>
+                                <li>Preferencias de productos</li>
+                            </ul>
+                        </section>
+
+                        <!-- Finalidad del tratamiento -->
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-gear me-2"></i>4. Finalidad del tratamiento
+                            </h2>
+                            <p>Sus datos personales serán tratados para las siguientes finalidades:</p>
+                            
+                            <h3 class="h5 mt-4 mb-3">4.1 Gestión de la relación comercial</h3>
+                            <ul class="ms-3">
+                                <li>Procesamiento de pedidos y envíos</li>
+                                <li>Gestión de devoluciones y reclamaciones</li>
+                                <li>Facturación y cobro</li>
+                                <li>Atención al cliente</li>
+                            </ul>
+                            
+                            <h3 class="h5 mt-4 mb-3">4.2 Marketing y comunicaciones</h3>
+                            <ul class="ms-3">
+                                <li>Envío de ofertas y promociones (con su consentimiento)</li>
+                                <li>Newsletter y comunicaciones comerciales</li>
+                                <li>Personalización de la experiencia de compra</li>
+                                <li>Análisis de preferencias y comportamiento</li>
+                            </ul>
+                            
+                            <h3 class="h5 mt-4 mb-3">4.3 Mejora de servicios</h3>
+                            <ul class="ms-3">
+                                <li>Análisis estadístico del uso del sitio web</li>
+                                <li>Mejora de la funcionalidad y usabilidad</li>
+                                <li>Desarrollo de nuevos productos y servicios</li>
+                                <li>Investigación de mercado</li>
+                            </ul>
+                        </section>
+
+                        <!-- Legitimación -->
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-check-circle me-2"></i>5. Legitimación del tratamiento
+                            </h2>
+                            <p>El tratamiento de sus datos está basado en las siguientes bases legales:</p>
+                            <ul class="ms-3">
+                                <li><strong>Ejecución del contrato:</strong> Para la gestión de pedidos y cumplimiento de obligaciones contractuales</li>
+                                <li><strong>Consentimiento:</strong> Para el envío de comunicaciones comerciales y marketing</li>
+                                <li><strong>Interés legítimo:</strong> Para la mejora de servicios y análisis estadístico</li>
+                                <li><strong>Cumplimiento legal:</strong> Para cumplir con obligaciones fiscales y contables</li>
+                            </ul>
+                        </section>
+
+                        <!-- Conservación de datos -->
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-clock me-2"></i>6. Conservación de datos
+                            </h2>
+                            <p>Sus datos personales se conservarán durante los siguientes períodos:</p>
+                            <ul class="ms-3">
+                                <li><strong>Datos de cuenta:</strong> Mientras mantenga una cuenta activa o durante 5 años tras la última actividad</li>
+                                <li><strong>Datos de compra:</strong> Durante 6 años para cumplir con obligaciones fiscales</li>
+                                <li><strong>Datos de marketing:</strong> Hasta que revoque su consentimiento o durante 3 años tras la última interacción</li>
+                                <li><strong>Datos de navegación:</strong> Durante 2 años para análisis estadístico</li>
+                            </ul>
+                        </section>
+
+                        <!-- Destinatarios -->
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-share me-2"></i>7. Destinatarios de los datos
+                            </h2>
+                            <p>Sus datos pueden ser comunicados a:</p>
+                            <ul class="ms-3">
+                                <li><strong>Proveedores de servicios:</strong> Empresas de transporte, pasarelas de pago, servicios de hosting</li>
+                                <li><strong>Autoridades públicas:</strong> Cuando sea requerido por ley</li>
+                                <li><strong>Empresas del grupo:</strong> Para la gestión centralizada de servicios</li>
+                            </ul>
+                            <p class="mt-3"><strong>No vendemos, alquilamos ni compartimos sus datos personales con terceros con fines comerciales.</strong></p>
+                        </section>
+
+                        <!-- Sus derechos -->
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-person-check me-2"></i>8. Sus derechos
+                            </h2>
+                            <p>Como titular de los datos, tiene los siguientes derechos:</p>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3 class="h5 mt-4 mb-3">8.1 Derechos de acceso y rectificación</h3>
+                                    <ul class="ms-3">
+                                        <li><strong>Acceso:</strong> Conocer qué datos tenemos sobre usted</li>
+                                        <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos</li>
+                                        <li><strong>Supresión:</strong> Solicitar la eliminación de sus datos</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="h5 mt-4 mb-3">8.2 Derechos de control</h3>
+                                    <ul class="ms-3">
+                                        <li><strong>Limitación:</strong> Restringir el tratamiento de sus datos</li>
+                                        <li><strong>Portabilidad:</strong> Recibir sus datos en formato estructurado</li>
+                                        <li><strong>Oposición:</strong> Oponerse al tratamiento de sus datos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <h3 class="h5 mt-4 mb-3">8.3 Cómo ejercer sus derechos</h3>
+                            <p>Puede ejercer sus derechos enviando un email a <strong>privacidad@petshop.es</strong> o escribiendo a nuestra dirección postal. Responderemos en un plazo máximo de 30 días.</p>
+                        </section>
+
+                        <!-- Cookies -->
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-cookie me-2"></i>9. Política de Cookies
+                            </h2>
+                            <p>Utilizamos cookies y tecnologías similares para mejorar su experiencia en nuestro sitio web:</p>
+                            
+                            <h3 class="h5 mt-4 mb-3">9.1 Tipos de cookies que utilizamos</h3>
+                            <ul class="ms-3">
+                                <li><strong>Cookies técnicas:</strong> Necesarias para el funcionamiento del sitio web</li>
+                                <li><strong>Cookies de análisis:</strong> Para analizar el uso del sitio web</li>
+                                <li><strong>Cookies de personalización:</strong> Para recordar sus preferencias</li>
+                                <li><strong>Cookies publicitarias:</strong> Para mostrar publicidad relevante</li>
+                            </ul>
+                            
+                            <h3 class="h5 mt-4 mb-3">9.2 Gestión de cookies</h3>
+                            <p>Puede configurar su navegador para rechazar cookies o recibir una notificación cuando se envíen. Sin embargo, esto puede afectar la funcionalidad del sitio web.</p>
+                        </section>
+
+                        <!-- Seguridad -->
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-shield-lock me-2"></i>10. Medidas de seguridad
+                            </h2>
+                            <p>Implementamos medidas técnicas y organizativas apropiadas para proteger sus datos personales:</p>
+                            <ul class="ms-3">
+                                <li>Cifrado SSL/TLS en todas las comunicaciones</li>
+                                <li>Acceso restringido a datos personales</li>
+                                <li>Copias de seguridad seguras</li>
+                                <li>Auditorías regulares de seguridad</li>
+                                <li>Formación del personal en protección de datos</li>
+                            </ul>
+                        </section>
+
+                        <!-- Cambios en la política -->
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-arrow-clockwise me-2"></i>11. Cambios en esta política
+                            </h2>
+                            <p>Nos reservamos el derecho de modificar esta Política de Privacidad. Los cambios serán notificados a través de nuestro sitio web o por email. Le recomendamos revisar esta política periódicamente.</p>
+                        </section>
+
+                        <!-- Contacto -->
+                        <section class="mb-4">
+                            <h2 class="h4 text-primary mb-3">
+                                <i class="bi bi-envelope me-2"></i>12. Contacto
+                            </h2>
+                            <p>Para cualquier consulta relacionada con esta Política de Privacidad o para ejercer sus derechos, puede contactarnos a través de:</p>
+                            <ul class="list-unstyled ms-3">
+                                <li><i class="bi bi-envelope me-2 text-primary"></i>Email: privacidad@petshop.es</li>
+                                <li><i class="bi bi-telephone me-2 text-primary"></i>Teléfono: +34 91 123 45 67</li>
+                                <li><i class="bi bi-geo-alt me-2 text-primary"></i>Dirección: Calle de las Mascotas, 123, 28001 Madrid, España</li>
+                            </ul>
+                            <p class="mt-3">También puede presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> si considera que sus derechos han sido vulnerados.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer mejorado -->
+    <footer class="pt-5 pb-3 bg-dark text-white mt-5 border-top border-3 border-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Información</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-person me-2"></i>Mi cuenta</a></li>
+                        <li><a href="formas-pago.html" class="social-link text-white-50"><i class="bi bi-credit-card me-2"></i>Formas de pago</a></li>
+                        <li><a href="gastos-envio.html" class="social-link text-white-50"><i class="bi bi-truck me-2"></i>Gastos de envío</a></li>
+                        <li><a href="devoluciones.html" class="social-link text-white-50"><i class="bi bi-arrow-return-left me-2"></i>Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-share me-2"></i>Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://es-es.facebook.com/" class="social-link text-white-50">
+                                <i class="bi bi-facebook me-2 text-primary"></i>Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" class="social-link text-white-50">
+                                <i class="bi bi-instagram me-2 text-danger"></i>Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/" class="social-link text-white-50">
+                                <i class="bi bi-twitter me-2 text-info"></i>Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" class="social-link text-white-50">
+                                <i class="bi bi-youtube me-2 text-danger"></i>YouTube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-building me-2"></i>Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="quienes-somos.html" class="social-link text-white-50"><i class="bi bi-people me-2"></i>Quiénes somos</a></li>
+                        <li><a href="nuestras-marcas.html" class="social-link text-white-50"><i class="bi bi-award me-2"></i>Nuestras marcas</a></li>
+                        <li><a href="aviso-legal.html" class="social-link text-white-50"><i class="bi bi-shield-check me-2"></i>Aviso legal</a></li>
+                        <li><a href="privacidad.html" class="social-link text-white-50"><i class="bi bi-lock me-2"></i>Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center border-top border-secondary pt-4 mt-4">
+                <p class="mb-0">
+                    <i class="bi bi-heart-fill text-danger me-1"></i>
+                    &copy; <span id="year"></span> PetShop. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Establecer la fecha de actualización
+        document.getElementById('fecha-actualizacion').textContent = new Date().toLocaleDateString('es-ES', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html> 

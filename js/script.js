@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     updateYear();
     initCart();
+    initCartPage();
+    updatePremiumStatusDisplay();
 });
 
 // Función para actualizar el año
@@ -217,7 +219,7 @@ class CartManager {
         if (cartButton) {
             cartButton.addEventListener('click', (e) => {
                 e.preventDefault();
-                window.location.href = 'carrito.html';
+                window.location.href = '../html/nav/carrito.html';
             });
         }
     }
@@ -318,7 +320,130 @@ function updatePremiumStatusDisplay() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    updatePremiumStatusDisplay();
-});
+// Funciones específicas para la página del carrito
+function renderCart() {
+    const cartManager = window.CartUtils.getCart();
+    const cartItems = cartManager.getCartItems();
+    const cartContainer = document.getElementById('cartItems');
+    const emptyCart = document.getElementById('emptyCart');
+    
+    if (!cartContainer || !emptyCart) return;
+    
+    if (cartItems.length === 0) {
+        cartContainer.innerHTML = '';
+        emptyCart.style.display = 'block';
+        updateSummary(0, 0, 0, false);
+        return;
+    }
+    
+    emptyCart.style.display = 'none';
+    cartContainer.innerHTML = cartItems.map((item, idx) => `
+        <div class="card mb-3 fade-in-up" style="animation-delay:${idx * 0.1}s">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-3 col-md-2 text-center">
+                        <img src="${item.image}" alt="${item.name}" class="img-fluid rounded">
+                    </div>
+                    <div class="col-9 col-md-4">
+                        <h5 class="card-title mb-2">${item.name}</h5>
+                        <p class="text-muted mb-1"><i class="bi bi-tag me-1"></i>Precio: ${item.price}</p>
+                        <p class="text-success mb-0 fw-bold"><i class="bi bi-calculator me-1"></i>Total: ${(parseFloat(item.price.replace('€', '').replace(',', '.')) * item.quantity).toFixed(2)}€</p>
+                    </div>
+                    <div class="col-12 col-md-3 mt-2 mt-md-0">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity('${item.id}', ${item.quantity - 1})">
+                                <i class="bi bi-dash"></i>
+                            </button>
+                            <input type="number" class="form-control mx-2" style="width: 60px;" value="${item.quantity}" min="1" onchange="updateQuantity('${item.id}', this.value)">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity('${item.id}', ${item.quantity + 1})">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2 text-center mt-2 mt-md-0">
+                        <h6 class="mb-0 fw-bold text-primary">${(parseFloat(item.price.replace('€', '').replace(',', '.')) * item.quantity).toFixed(2)}€</h6>
+                        <small class="text-muted">${item.quantity} ${item.quantity === 1 ? 'unidad' : 'unidades'}</small>
+                    </div>
+                    <div class="col-6 col-md-1 text-center mt-2 mt-md-0">
+                        <button class="btn btn-outline-danger btn-sm" onclick="removeItem('${item.id}')">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    
+    updateSummary(cartManager.getTotalItems(), cartManager.getTotalPrice(), cartManager.getFinalTotal(), cartManager.isUserPremium());
+}
+
+function updateQuantity(productId, newQuantity) {
+    window.CartUtils.getCart().updateQuantity(productId, parseInt(newQuantity));
+    renderCart();
+}
+
+function removeItem(productId) {
+    window.CartUtils.getCart().removeFromCart(productId);
+    renderCart();
+}
+
+function updateSummary(totalItems, subtotal, finalTotal, isPremium) {
+    const totalItemsEl = document.getElementById('totalItems');
+    const subtotalEl = document.getElementById('subtotal');
+    const totalPriceEl = document.getElementById('totalPrice');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    const shippingEl = document.getElementById('shipping');
+    const shippingInfo = document.getElementById('shippingInfo');
+    
+    if (!totalItemsEl || !subtotalEl || !totalPriceEl || !checkoutBtn || !shippingEl || !shippingInfo) return;
+    
+    totalItemsEl.textContent = totalItems;
+    subtotalEl.textContent = subtotal.toFixed(2) + '€';
+    totalPriceEl.textContent = finalTotal.toFixed(2) + '€';
+    checkoutBtn.disabled = totalItems === 0;
+    
+    const shipping = subtotal >= 50 || isPremium ? 'Gratis' : '4.99€';
+    shippingEl.textContent = shipping;
+    
+    if (isPremium) {
+        shippingInfo.innerHTML = '<small class="text-warning"><i class="bi bi-star-fill me-2"></i>Usuario Premium - Envío gratuito</small>';
+    } else if (subtotal >= 50) {
+        shippingInfo.innerHTML = '<small class="text-success"><i class="bi bi-check-circle me-2"></i>¡Envío gratuito! Pedido ≥ 50€</small>';
+    } else {
+        const remaining = (50 - subtotal).toFixed(2);
+        shippingInfo.innerHTML = `<small class="text-info"><i class="bi bi-info-circle me-2"></i>Agrega ${remaining}€ más para envío gratuito</small>`;
+    }
+}
+
+function initCartPage() {
+    // Verificar si estamos en la página del carrito
+    if (window.location.pathname.includes('carrito.html')) {
+        renderCart();
+        
+        // Event listeners para botones del carrito
+        const clearCartBtn = document.getElementById('clearCartBtn');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        
+        if (clearCartBtn) {
+            clearCartBtn.addEventListener('click', function() {
+                if (confirm('¿Estás seguro de que quieres vaciar el carrito?')) {
+                    window.CartUtils.getCart().clearCart();
+                    renderCart();
+                }
+            });
+        }
+        
+        if (checkoutBtn) {
+            checkoutBtn.addEventListener('click', function() {
+                alert('Procediendo el pago...');
+            });
+        }
+    }
+}
+
+// Exportar funciones para uso global
+window.renderCart = renderCart;
+window.updateQuantity = updateQuantity;
+window.removeItem = removeItem;
+window.updateSummary = updateSummary;
 
