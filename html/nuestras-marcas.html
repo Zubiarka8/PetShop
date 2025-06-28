@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Marcas - PetShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); backdrop-filter: blur(10px);">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center gap-2 fs-2 fw-bold text-primary">
+                <i class="bi bi-heart-fill text-danger"></i>PetShop
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="#">Perros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="#">Gatos</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-4">
+                    <button class="btn btn-primary position-relative fw-semibold rounded-pill px-4 shadow-sm" id="cartButton">
+                        <i class="bi bi-cart3 me-2 text-white"></i>Carrito
+                        <span class="position-absolute top-0 start-100 translate-middle badge cart-badge bg-danger rounded-pill">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 pt-5">
+        <h1 class="fw-bold mb-4 mt-5 text-center">Nuestras Marcas</h1>
+        <p class="lead text-center mb-4">Trabajamos con las mejores marcas del sector para ofrecerte calidad, innovación y confianza en cada producto. Descubre algunas de las marcas y productos destacados de nuestro catálogo:</p>
+        <!-- Marcas destacadas -->
+        <div class="mb-5">
+            <h2 class="h4 text-success text-center mb-4"><i class="bi bi-patch-check-fill me-2"></i>Marcas más confiables y de mejor calidad</h2>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 justify-content-center align-items-center">
+                <div class="col text-center">
+                    <img src="../img/Perros/pienso-optimaNova.jpg" class="img-fluid rounded mb-2 shadow-sm" style="max-height:70px" alt="Optima Nova">
+                    <div class="fw-bold">Optima</div>
+                </div>
+                <div class="col text-center">
+                    <img src="../img/Perros/pienso-vegano-Benevo.jpg" class="img-fluid rounded mb-2 shadow-sm" style="max-height:70px" alt="Benevo">
+                    <div class="fw-bold">Benevo</div>
+                </div>
+                <div class="col text-center">
+                    <img src="../img/Perros/pienso-senior-ultiima.jpg" class="img-fluid rounded mb-2 shadow-sm" style="max-height:70px" alt="Ultima">
+                    <div class="fw-bold">Ultima</div>
+                </div>
+                <div class="col text-center">
+                    <img src="https://www.alpha-spirit.com/wp-content/uploads/2021/09/logo-alpha-spirit.png" class="img-fluid rounded mb-2 shadow-sm bg-white p-2" style="max-height:70px" alt="Alpha Spirit">
+                    <div class="fw-bold">Alpha Spirit</div>
+                </div>
+                <div class="col text-center">
+                    <img src="../img/Gatos/pienso-Whiskas.jpg" class="img-fluid rounded mb-2 shadow-sm" style="max-height:70px" alt="Whiskas">
+                    <div class="fw-bold">Whiskas</div>
+                </div>
+                <div class="col text-center">
+                    <img src="../img/Gatos/pienso-Brekkies-Delicious.jpg" class="img-fluid rounded mb-2 shadow-sm" style="max-height:70px" alt="Brekkies">
+                    <div class="fw-bold">Brekkies</div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <!-- Perros -->
+            <h2 class="h4 mt-4 mb-3 text-primary"><i class="bi bi-bone me-2"></i>Perros</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-4 mb-4">
+                <div class="col"><img src="../img/Perros/Huesitos-Nayeco.jpg" class="img-fluid rounded shadow-sm" alt="Huesitos Nayeco"></div>
+                <div class="col"><img src="../img/Perros/Pelota-Nayeco.jpg" class="img-fluid rounded shadow-sm" alt="Pelota Nayeco"></div>
+                <div class="col"><img src="../img/Perros/Huesito-Nayeco.jpg" class="img-fluid rounded shadow-sm" alt="Huesito Nayeco"></div>
+                <div class="col"><img src="../img/Perros/pienso-optimaNova.jpg" class="img-fluid rounded shadow-sm" alt="Optima Nova"></div>
+                <div class="col"><img src="../img/Perros/pienso-vegano-BenevoEnLata.jpg" class="img-fluid rounded shadow-sm" alt="Benevo En Lata"></div>
+                <div class="col"><img src="../img/Perros/pienso-vegano-Benevo.jpg" class="img-fluid rounded shadow-sm" alt="Benevo"></div>
+                <div class="col"><img src="../img/Perros/pienso-senior-ultiimaPequeña.jpg" class="img-fluid rounded shadow-sm" alt="Ultima Pequeña"></div>
+                <div class="col"><img src="../img/Perros/pienso-senior-mediumMaxi.jpg" class="img-fluid rounded shadow-sm" alt="Medium Maxi"></div>
+                <div class="col"><img src="../img/Perros/pienso-senior-ultiima.jpg" class="img-fluid rounded shadow-sm" alt="Ultima"></div>
+            </div>
+            <!-- Gatos -->
+            <h2 class="h4 mt-4 mb-3 text-primary"><i class="bi bi-emoji-smile me-2"></i>Gatos</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-4 mb-4">
+                <div class="col"><img src="../img/Gatos/pelotas-de-juguete.jpg" class="img-fluid rounded shadow-sm" alt="Pelotas de Juguete"></div>
+                <div class="col"><img src="../img/Gatos/latas-monoproteicas-SaborMelon.webp" class="img-fluid rounded shadow-sm" alt="Latas Sabor Melón"></div>
+                <div class="col"><img src="../img/Gatos/latas-monoproteicas-SaborPolloyPiña.webp" class="img-fluid rounded shadow-sm" alt="Latas Sabor Pollo y Piña"></div>
+                <div class="col"><img src="../img/Gatos/PACK-latas-monoproteicas-SaborPollo2.webp" class="img-fluid rounded shadow-sm" alt="Pack Latas Pollo"></div>
+                <div class="col"><img src="../img/Gatos/latas-monoproteicas-SaborPollo2.webp" class="img-fluid rounded shadow-sm" alt="Latas Pollo 2"></div>
+                <div class="col"><img src="../img/Gatos/latas-monoproteicas-SaborPollo" class="img-fluid rounded shadow-sm" alt="Latas Pollo"></div>
+                <div class="col"><img src="../img/Gatos/pienso-Whiskas.jpg" class="img-fluid rounded shadow-sm" alt="Whiskas"></div>
+                <div class="col"><img src="../img/Gatos/pienso-Brekkies-Delicious.jpg" class="img-fluid rounded shadow-sm" alt="Brekkies Delicious"></div>
+                <div class="col"><img src="../img/Gatos/juguete-raton.webp" class="img-fluid rounded shadow-sm" alt="Juguete Ratón"></div>
+            </div>
+            <!-- Otros -->
+            <h2 class="h4 mt-4 mb-3 text-primary"><i class="bi bi-stars me-2"></i>Otros</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-4 mb-4">
+                <div class="col"><img src="../img/Otros/Finanzas.jpg" class="img-fluid rounded shadow-sm" alt="Finanzas"></div>
+                <div class="col"><img src="../img/Otros/ServiciosPlus.png" class="img-fluid rounded shadow-sm" alt="Servicios Plus"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-3 bg-dark text-white mt-5 border-top border-3 border-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Información</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-person me-2"></i>Mi cuenta</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-credit-card me-2"></i>Formas de pago</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-truck me-2"></i>Gastos de envío</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-arrow-return-left me-2"></i>Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-share me-2"></i>Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://es-es.facebook.com/" class="social-link text-white-50">
+                                <i class="bi bi-facebook me-2 text-primary"></i>Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" class="social-link text-white-50">
+                                <i class="bi bi-instagram me-2 text-danger"></i>Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/" class="social-link text-white-50">
+                                <i class="bi bi-twitter me-2 text-info"></i>Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" class="social-link text-white-50">
+                                <i class="bi bi-youtube me-2 text-danger"></i>YouTube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-building me-2"></i>Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-people me-2"></i>Quiénes somos</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-award me-2"></i>Nuestras marcas</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-shield-check me-2"></i>Aviso legal</a></li>
+                        <li><a href="#" class="social-link text-white-50"><i class="bi bi-lock me-2"></i>Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center border-top border-secondary pt-4 mt-4">
+                <p class="mb-0">
+                    <i class="bi bi-heart-fill text-danger me-1"></i>
+                    &copy; <span id="year"></span> PetShop. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
