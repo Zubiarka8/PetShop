@@ -3,127 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>PetShop - Tu tienda de mascotas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
 
-    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-light">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand text-secondary ">PetShop</a>
-
-            <!-- Botón hamburguesa (solo visible en <576px) -->
-                <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarMenu"
-                        aria-label="Toggle navigation"
-                        style="background-color: transparent; border: 1px solid black;">
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center gap-2 fs-2 fw-bold text-primary">
+                <i class="bi bi-heart-fill text-danger"></i>PetShop
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Menú colapsable -->
-                <div class="collapse navbar-collapse" id="navbarMenu">
-                <!-- Navegación -->
-                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-                    <li class="nav-item"><a class="nav-link text-secondary" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-secondary" href="#">Perros</a></li>
-                    <li class="nav-item"><a class="nav-link text-secondary" href="#">Gatos</a></li>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect active" href="index.html" style="transition: all 0.3s ease;">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="./nav/perro.html" style="transition: all 0.3s ease;">Perros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="./nav/gato.html" style="transition: all 0.3s ease;">Gatos</a>
+                    </li>
                 </ul>
+                <div class="d-flex align-items-center gap-4">
+                    <form class="search-form d-none d-md-block">
+                        <div class="input-group">
+                            <input type="search" class="form-control border-0 rounded-start-pill shadow-sm" placeholder="Buscar productos..." aria-label="Buscar" style="background: rgba(255,255,255,0.9);">
+                            <button class="btn btn-primary rounded-end-pill shadow-sm" type="submit">
+                                <i class="bi bi-search text-white"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle fw-semibold rounded-pill px-4" type="button" data-bs-toggle="dropdown" style="border: 2px solid var(--primary-color);">
+                            <i class="bi bi-person-circle me-2"></i>Mi cuenta
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0">
+                            <li><a class="dropdown-item" href="./nav/iniciar-sesion.html"><i class="bi bi-box-arrow-in-right me-2"></i>Iniciar sesión</a></li>
+                            <li><a class="dropdown-item" href="./nav/crear-cuenta.html"><i class="bi bi-person-plus me-2"></i>Crear cuenta</a></li>
+                        </ul>
+                    </div>
 
-                <!-- Carrito de compra -->
-                <button class="btn btn-outline-dark position-relative ms-2 transparent" type="button">
-                    <i class="bi bi-cart"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                        3
-                        <span class="visually-hidden">productos en el carrito</span>
-                    </span>
-                </button>
+                    <a href="./nav/carrito.html" class="btn btn-primary position-relative fw-semibold rounded-pill px-4 shadow-sm text-decoration-none" id="cartButton">
+                        <i class="bi bi-cart3 me-2 text-white"></i>Carrito
+                        <span class="position-absolute top-0 start-100 translate-middle badge cart-badge bg-danger rounded-pill">
+                            0
+                        </span>
+                    </a>
 
-                <!-- Barra de búsqueda -->
-                <form class="d-flex flex-grow-1 flex-sm-grow-0 mt-3 mt-sm-0 ms-sm-2 px-2 px-sm-0">
-                    <input type="search" class="form-control me-2" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-secondary transparent" type="submit">Buscar</button>
-                </form>
+                </div>
             </div>
         </div>
     </nav>
 
-
-    <div class="container mt-5 ps-5">
-        <div class="row">
-            <div class="col-12 ">
-                <h3>Las mejores ofertas</h3>
+    <!-- Hero Section -->
+    <section class="hero-section py-5" style="background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); min-height: 350px;">
+        <div class="container">
+            <div class="hero-content fade-in-up text-center text-white py-5">
+                <h1 class="hero-title display-3 fw-bold mb-3">Bienvenido a PetShop</h1>
+                <p class="hero-subtitle fs-4 mb-4">Tu tienda de confianza para el cuidado de tus mascotas</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <button class="btn btn-light btn-lg rounded-pill px-4 shadow-sm">
+                        <i class="bi bi-shop me-2"></i>Ver productos
+                    </button>
+                    <button class="btn btn-outline-light btn-lg rounded-pill px-4 shadow-sm">
+                        <i class="bi bi-info-circle me-2"></i>Más información
+                    </button>
+                </div>
             </div>
         </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5 pt-5">
+        <!-- Sección de ofertas -->
+        <section class="mb-5">
+            <h2 class="section-title">🔥 Las Mejores Ofertas</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <!-- Producto 1 -->
+                <div class="col fade-in-up">
+                    <div class="card h-100">
+                        <a href="productos/producto-de-perro/producto-hueso-nayeco.html" class="text-decoration-none">
+                            <div class="position-relative">
+                                <img src="../img/Perros/Huesito-Nayeco.jpg" class="card-img-top img-fluid" alt="Hueso Dental Perro" loading="lazy">
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-3">-30%</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Hueso Dental Nayeco</h5>
+                            </div>
+                        </a>
+                        <div class="card-body d-flex flex-column pt-0">
+                            <p class="card-text">Hueso masticable para limpieza dental, ideal para perros medianos y grandes.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3">
+                                    <span class="price-old">9.99€</span>
+                                    <span class="price-new ms-2">6.99€</span>
+                                </div>
+                                <button class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="col fade-in-up">
+                    <div class="card h-100">
+                        <a href="productos/producto-de-perro/producto-pelota-nayeco.html" class="text-decoration-none">
+                            <div class="position-relative">
+                                <img src="../img/Perros/Pelota-Nayeco.jpg" class="card-img-top img-fluid" alt="Pelota Nayeco" loading="lazy">
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-3">-20%</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Pelota Nayeco Resistente</h5>
+                            </div>
+                        </a>
+                        <div class="card-body d-flex flex-column pt-0">
+                            <p class="card-text">Pelota de caucho natural, perfecta para juegos de lanzar y recoger.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3">
+                                    <span class="price-old">7.50€</span>
+                                    <span class="price-new ms-2">5.99€</span>
+                                </div>
+                                <button class="btn btn-secondary btn-lg rounded-pill" disabled>
+                                    <i class="bi bi-x-circle me-2"></i>Sin stock
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="col fade-in-up">
+                    <div class="card h-100">
+                        <a href="productos/producto-de-perro/producto-optima-nova.html" class="text-decoration-none">
+                            <div class="position-relative">
+                                <img src="../img/Perros/pienso-optimaNova.jpg" class="card-img-top img-fluid" alt="Pienso Optima Nova" loading="lazy">
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-3">-15%</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Pienso Optima Nova Adulto</h5>
+                            </div>
+                        </a>
+                        <div class="card-body d-flex flex-column pt-0">
+                            <p class="card-text">Alimento seco premium para perros adultos, rico en pollo y arroz.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3">
+                                    <span class="price-old">39.90€</span>
+                                    <span class="price-new ms-2">33.90€</span>
+                                </div>
+                                <button class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 4 -->
+                <div class="col fade-in-up">
+                    <div class="card h-100">
+                        <a href="productos/producto-de-gato/producto-juguete-raton.html" class="text-decoration-none">
+                            <div class="position-relative">
+                                <img src="../img/Gatos/juguete-raton.webp" class="card-img-top img-fluid" alt="Juguete Ratón Gato" loading="lazy">
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-3">-10%</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Juguete Ratón para Gato</h5>
+                            </div>
+                        </a>
+                        <div class="card-body d-flex flex-column pt-0">
+                            <p class="card-text">Ratón de peluche con catnip, estimula el instinto de caza de tu gato.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3">
+                                    <span class="price-old">4.99€</span>
+                                    <span class="price-new ms-2">4.49€</span>
+                                </div>
+                                <button class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de novedades -->
+        <section class="mb-5">
+            <h2 class="section-title">🆕 Novedades</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <!-- Producto 1 -->
+                <div class="col fade-in-up">
+                    <div class="card h-100">
+                        <a href="productos/producto-de-perro/producto-senior-ultima.html" class="text-decoration-none">
+                            <div class="position-relative">
+                                <img src="../img/Perros/pienso-senior-ultiima.jpg" class="card-img-top img-fluid" alt="Pienso Senior Ultima" loading="lazy">
+                                <span class="badge bg-success position-absolute top-0 start-0 m-3">Nuevo</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Pienso Senior Ultima</h5>
+                            </div>
+                        </a>
+                        <div class="card-body d-flex flex-column pt-0">
+                            <p class="card-text">Especial para perros mayores, con antioxidantes y bajo en grasas.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3">
+                                    <span class="price-new ms-2">37.80€</span>
+                                </div>
+                                <button class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="col fade-in-up">
+                    <div class="card h-100">
+                        <a href="productos/producto-de-perro/producto-vegano-benevo.html" class="text-decoration-none">
+                            <div class="position-relative">
+                                <img src="../img/Perros/pienso-vegano-Benevo.jpg" class="card-img-top img-fluid" alt="Pienso Vegano Benevo" loading="lazy">
+                                <span class="badge bg-success position-absolute top-0 start-0 m-3">Nuevo</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Pienso Vegano Benevo</h5>
+                            </div>
+                        </a>
+                        <div class="card-body d-flex flex-column pt-0">
+                            <p class="card-text">Alimento 100% vegetal para perros con alergias o dietas especiales.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3">
+                                    <span class="price-new ms-2">40.50€</span>
+                                </div>
+                                <button class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="col fade-in-up">
+                    <div class="card h-100">
+                        <a href="productos/producto-de-perro/producto-huesitos-nayeco.html" class="text-decoration-none">
+                            <div class="position-relative">
+                                <img src="../img/Perros/Huesitos-Nayeco.jpg" class="card-img-top img-fluid" alt="Pack Huesitos Nayeco" loading="lazy">
+                                <span class="badge bg-success position-absolute top-0 start-0 m-3">Nuevo</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Pack Huesitos Nayeco</h5>
+                            </div>
+                        </a>
+                        <div class="card-body d-flex flex-column pt-0">
+                            <p class="card-text">Set de 3 huesitos de diferentes sabores para perros juguetones.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3">
+                                    <span class="price-new ms-2">9.99€</span>
+                                </div>
+                                <button class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 4 -->
+                <div class="col fade-in-up">
+                    <div class="card h-100">
+                        <a href="productos/producto-de-gato/producto-melon-gato.html" class="text-decoration-none">
+                            <div class="position-relative">
+                                <img src="../img/Gatos/latas-monoproteicas-SaborMelon.webp" class="card-img-top img-fluid" alt="Comida Húmeda Sabor Melón" loading="lazy">
+                                <span class="badge bg-success position-absolute top-0 start-0 m-3">Nuevo</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Comida Húmeda Sabor Melón</h5>
+                            </div>
+                        </a>
+                        <div class="card-body d-flex flex-column pt-0">
+                            <p class="card-text">Alimento húmedo premium con sabor refrescante a melón, ideal para gatos exigentes.</p>
+                            <div class="mt-auto">
+                                <div class="mb-3">
+                                    <span class="price-new ms-2">3.99€</span>
+                                </div>
+                                <button class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de servicios -->
+        <section class="mb-5">
+            <h2 class="section-title">🛠️ Servicios Adicionales</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+                <!-- Servicio 1: PetShop Plus -->
+                <div class="col col-lg-6 fade-in-up">
+                    <div class="card h-100">
+                        <div class="position-relative">
+                            <img src="../img/Otros/ServiciosPlus.png" class="card-img-top img-fluid" alt="PetShop Plus" loading="lazy">
+                            <span class="badge bg-primary position-absolute top-0 start-0 m-3">Premium</span>
+                        </div>
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title">PetShop Plus</h5>
+                            <p class="card-text">Acceso exclusivo a productos premium, envío gratuito y descuentos especiales para miembros Plus.</p>
+                            <div class="mt-auto">
+                                <a href="servicios/petshop-plus.html" class="btn btn-primary w-100">
+                                    <i class="bi bi-star-fill me-2"></i>Suscribirse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Servicio 2: Financiación -->
+                <div class="col col-lg-6 fade-in-up">
+                    <div class="card h-100">
+                        <div class="position-relative">
+                            <img src="../img/Otros/Finanzas.jpg" class="card-img-top img-fluid" alt="Financiación" loading="lazy">
+                            <span class="badge bg-warning position-absolute top-0 start-0 m-3">Financiado</span>
+                        </div>
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title">Opción de Financiación</h5>
+                            <p class="card-text">Compra ahora y paga en cómodos plazos sin intereses para pedidos superiores a 50€.</p>
+                            <div class="mt-auto">
+                                <a href="servicios/financiacion.html" class="btn btn-primary w-100">
+                                    <i class="bi bi-credit-card me-2"></i>Ver opciones
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <footer class="bg-light text-dark pt-5 pb-3 mt-5">
-    <div class="container">
-        <div class="row">
-
-        <!-- Columna 1: Información -->
-        <div class="col-sm-12 col-md-4 mb-4">
-            <h5 class="text-uppercase">Información</h5>
-            <ul class="list-unstyled">
-            <li><a href="#" class="text-dark text-decoration-none">Mi cuenta</a></li>
-            <li><a href="#" class="text-dark text-decoration-none">Formas de pago</a></li>
-            <li><a href="#" class="text-dark text-decoration-none">Gastos de envío</a></li>
-            <li><a href="#" class="text-dark text-decoration-none">Devoluciones</a></li>
-            </ul>
+    <!-- Footer mejorado -->
+    <footer class="pt-5 pb-3 bg-dark text-white mt-5 border-top border-3 border-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Información</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="footer/mi-cuenta.html" class="social-link text-white-50"><i class="bi bi-person me-2"></i>Mi cuenta</a></li>
+                        <li><a href="footer/formas-pago.html" class="social-link text-white-50"><i class="bi bi-credit-card me-2"></i>Formas de pago</a></li>
+                        <li><a href="footer/gastos-envio.html" class="social-link text-white-50"><i class="bi bi-truck me-2"></i>Gastos de envío</a></li>
+                        <li><a href="footer/devoluciones.html" class="social-link text-white-50"><i class="bi bi-arrow-return-left me-2"></i>Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-share me-2"></i>Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://es-es.facebook.com/" class="social-link text-white-50">
+                                <i class="bi bi-facebook me-2 text-primary"></i>Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" class="social-link text-white-50">
+                                <i class="bi bi-instagram me-2 text-danger"></i>Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/" class="social-link text-white-50">
+                                <i class="bi bi-twitter me-2 text-info"></i>Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" class="social-link text-white-50">
+                                <i class="bi bi-youtube me-2 text-danger"></i>YouTube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-building me-2"></i>Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="footer/quienes-somos.html" class="social-link text-white-50"><i class="bi bi-people me-2"></i>Quiénes somos</a></li>
+                        <li><a href="footer/nuestras-marcas.html" class="social-link text-white-50"><i class="bi bi-award me-2"></i>Nuestras marcas</a></li>
+                        <li><a href="footer/privacidad.html" class="social-link text-white-50"><i class="bi bi-shield-check me-2"></i>Aviso legal</a></li>
+                        <li><a href="footer/privacidad.html" class="social-link text-white-50"><i class="bi bi-lock me-2"></i>Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center border-top border-secondary pt-4 mt-4">
+                <p class="mb-0">
+                    <i class="bi bi-heart-fill text-danger me-1"></i>
+                    &copy; <span id="year"></span> PetShop. Todos los derechos reservados.
+                </p>
+            </div>
         </div>
-
-        <!-- Columna 2: Redes Sociales -->
-        <div class="col-sm-12 col-md-4 mb-4">
-            <h5 class="text-uppercase">Redes Sociales</h5>
-            <ul class="list-unstyled">
-            <li>
-                <i class="bi bi-facebook me-2 text-primary"></i>
-                <a href="https://es-es.facebook.com/" class="text-dark text-decoration-none social-link">Facebook</a>
-            </li>
-            <li>
-                <i class="bi bi-instagram me-2 text-danger"></i>
-                <a href="https://www.instagram.com/" class="text-dark text-decoration-none social-link">Instagram</a>
-            </li>
-            <li>
-                <i class="bi bi-twitter me-2 text-info"></i>
-                <a href="https://x.com/" class="text-dark text-decoration-none social-link">Twitter</a>
-            </li>
-            <li>
-                <i class="bi bi-youtube me-2 text-danger"></i>
-                <a href="https://www.youtube.com/" class="text-dark text-decoration-none social-link">YouTube</a>
-            </li>
-            </ul>
-        </div>
-
-        <!-- Columna 3: Empresa -->
-        <div class="col-sm-12 col-md-4 mb-4">
-            <h5 class="text-uppercase">Empresa</h5>
-            <ul class="list-unstyled">
-            <li><a href="#" class="text-dark text-decoration-none">Quiénes somos</a></li>
-            <li><a href="#" class="text-dark text-decoration-none">Nuestras marcas</a></li>
-            <li><a href="#" class="text-dark text-decoration-none">Aviso legal</a></li>
-            <li><a href="#" class="text-dark text-decoration-none">Privacidad</a></li>
-            </ul>
-        </div>
-
-        </div>
-
-        <!-- Copyright -->
-        <div class="text-center border-top border-secondary pt-3 mt-3">
-        <small>&copy; <span id="year"></span> PetShop. Todos los derechos reservados.</small>
-        </div>
-    </div>
     </footer>
 
-    
-    <script src="../js/script.js">
-    </script>
-
+    <script src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

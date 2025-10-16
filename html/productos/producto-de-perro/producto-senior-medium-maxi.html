@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pienso Senior Medium Maxi - PetShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg">
+        <div class="container">
+            <a href="../../index.html" class="navbar-brand d-flex align-items-center gap-2 fs-2 fw-bold text-primary">
+                <i class="bi bi-heart-fill text-danger"></i>PetShop
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="../../nav/perro.html">Perros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="../../nav/gato.html">Gatos</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-4">
+                    <form class="search-form d-none d-md-block">
+                        <div class="input-group">
+                            <input type="search" class="form-control border-0 rounded-start-pill shadow-sm" placeholder="Buscar productos..." aria-label="Buscar" style="background: rgba(255,255,255,0.9);">
+                            <button class="btn btn-primary rounded-end-pill shadow-sm" type="submit">
+                                <i class="bi bi-search text-white"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle fw-semibold rounded-pill px-4" type="button" data-bs-toggle="dropdown" style="border: 2px solid var(--primary-color);">
+                            <i class="bi bi-person-circle me-2"></i>Mi cuenta
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0">
+                            <li><a class="dropdown-item" href="../../nav/iniciar-sesion.html"><i class="bi bi-box-arrow-in-right me-2"></i>Iniciar sesión</a></li>
+                            <li><a class="dropdown-item" href="../../nav/crear-cuenta.html"><i class="bi bi-person-plus me-2"></i>Crear cuenta</a></li>
+                        </ul>
+                    </div>
+                    <a href="../../nav/carrito.html" class="btn btn-primary position-relative fw-semibold rounded-pill px-4 shadow-sm text-decoration-none" id="cartButton">
+                        <i class="bi bi-cart3 me-2 text-white"></i>Carrito
+                        <span class="position-absolute top-0 start-100 translate-middle badge cart-badge bg-danger rounded-pill">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 pt-5">
+        <div class="row g-5 align-items-center" style="min-height: 450px;">
+            <!-- Imagen principal -->
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center" style="min-height: 400px;">
+                <img src="../../../img/Perros/pienso-senior-mediumMaxi.jpg" alt="Pienso Senior Medium Maxi" class="img-fluid rounded shadow-lg" style="max-width: 90%; max-height: 500px; min-width: 300px; background: #fff; object-fit: contain;">
+            </div>
+            <!-- Info principal -->
+            <div class="col-12 col-md-6">
+                <h1 class="fw-bold mb-3">Pienso Senior Medium Maxi</h1>
+                <div class="mb-3">
+                    <span class="badge bg-success me-2">Nuevo</span>
+                    <span class="price-new fs-3">35.90€</span>
+                </div>
+                <p class="lead mb-4">Especial para perros medianos y grandes mayores de 7 años. Formulado con ingredientes específicos para mantener la vitalidad y salud articular en perros senior de mayor tamaño.</p>
+                <ul class="list-unstyled mb-4">
+                    <li><i class="bi bi-check-circle text-success me-2"></i>Específico para perros medianos y grandes</li>
+                    <li><i class="bi bi-check-circle text-success me-2"></i>Bajo en grasas para control de peso</li>
+                    <li><i class="bi bi-check-circle text-success me-2"></i>Con glucosamina para salud articular</li>
+                    <li><i class="bi bi-check-circle text-success me-2"></i>Antioxidantes para el sistema inmune</li>
+                </ul>
+                <div class="d-grid gap-2 mb-3">
+                    <button id="addToCartBtn" class="btn btn-primary btn-lg rounded-pill">
+                        <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                    </button>
+                </div>
+                <div class="mb-3">
+                    <span class="badge bg-success"><i class="bi bi-check-circle me-1"></i>Stock disponible: envío inmediato</span>
+                    <span class="ms-3 text-muted"><i class="bi bi-box-arrow-in-left me-1"></i>Devolución fácil 30 días</span>
+                </div>
+                <div class="alert alert-info mt-4" role="alert">
+                    <i class="bi bi-truck me-2"></i>Entrega estimada: 24-48h laborables
+                </div>
+            </div>
+        </div>
+
+        <!-- Descripción ampliada -->
+        <div class="row mt-5">
+            <div class="col-12 col-lg-8">
+                <h2 class="h4 mb-3">Descripción</h2>
+                <p>El <strong>Pienso Senior Medium Maxi</strong> está diseñado específicamente para perros medianos y grandes que han alcanzado la edad senior. Su fórmula especial incluye ingredientes que ayudan a mantener la movilidad, la salud articular y el sistema inmune, adaptados a las necesidades específicas de perros de mayor tamaño.</p>
+                <h3 class="h5 mt-4">Características técnicas</h3>
+                <ul>
+                    <li>Proteína: 26% mínimo</li>
+                    <li>Grasa: 13% máximo</li>
+                    <li>Fibra: 4% máximo</li>
+                    <li>Peso: 15kg</li>
+                    <li>Tamaño de croqueta: Grande</li>
+                    <li>Con glucosamina y condroitina</li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="bg-light rounded p-4 shadow-sm mb-4">
+                    <h4 class="h6 fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Envío y devoluciones</h4>
+                    <ul class="mb-0">
+                        <li>Envío gratuito en pedidos desde 50€</li>
+                        <li>Entrega en 24-48h laborables</li>
+                        <li>Devolución fácil hasta 30 días</li>
+                        <li>Atención al cliente personalizada</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded p-4 shadow-sm">
+                    <h4 class="h6 fw-bold mb-3"><i class="bi bi-star-half me-2"></i>Opiniones</h4>
+                    <p class="mb-1"><i class="bi bi-person-circle me-2"></i><strong>David M.</strong> <span class="text-warning">★★★★★</span></p>
+                    <p class="small text-muted mb-2">"Perfecto para mi pastor alemán de 9 años."</p>
+                    <p class="mb-1"><i class="bi bi-person-circle me-2"></i><strong>Carmen R.</strong> <span class="text-warning">★★★★☆</span></p>
+                    <p class="small text-muted">"Mi labrador está más activo desde que lo come."</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-3 bg-dark text-white mt-5 border-top border-3 border-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Información</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../../footer/mi-cuenta.html" class="social-link text-white-50"><i class="bi bi-person me-2"></i>Mi cuenta</a></li>
+                        <li><a href="../../footer/formas-pago.html" class="social-link text-white-50"><i class="bi bi-credit-card me-2"></i>Formas de pago</a></li>
+                        <li><a href="../../footer/gastos-envio.html" class="social-link text-white-50"><i class="bi bi-truck me-2"></i>Gastos de envío</a></li>
+                        <li><a href="../../footer/devoluciones.html" class="social-link text-white-50"><i class="bi bi-arrow-return-left me-2"></i>Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-share me-2"></i>Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://es-es.facebook.com/" class="social-link text-white-50">
+                                <i class="bi bi-facebook me-2 text-primary"></i>Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" class="social-link text-white-50">
+                                <i class="bi bi-instagram me-2 text-danger"></i>Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/" class="social-link text-white-50">
+                                <i class="bi bi-twitter me-2 text-info"></i>Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" class="social-link text-white-50">
+                                <i class="bi bi-youtube me-2 text-danger"></i>YouTube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-building me-2"></i>Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../../footer/quienes-somos.html" class="social-link text-white-50"><i class="bi bi-people me-2"></i>Quiénes somos</a></li>
+                        <li><a href="../../footer/nuestras-marcas.html" class="social-link text-white-50"><i class="bi bi-award me-2"></i>Nuestras marcas</a></li>
+                        <li><a href="../../footer/aviso-legal.html" class="social-link text-white-50"><i class="bi bi-shield-check me-2"></i>Aviso legal</a></li>
+                        <li><a href="../../footer/privacidad.html" class="social-link text-white-50"><i class="bi bi-lock me-2"></i>Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center border-top border-secondary pt-4 mt-4">
+                <p class="mb-0">
+                    <i class="bi bi-heart-fill text-danger me-1"></i>
+                    &copy; <span id="year"></span> PetShop. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('addToCartBtn');
+        if (btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const product = {
+                    id: 'pienso_senior_medium_maxi',
+                    name: 'Pienso Senior Medium Maxi',
+                    price: '35.90€',
+                    image: '../../../img/Perros/pienso-senior-mediumMaxi.jpg'
+                };
+                if (window.CartUtils && window.CartUtils.addProduct) {
+                    window.CartUtils.addProduct(product);
+                    btn.innerHTML = '<i class="bi bi-check-circle me-2"></i>Agregado';
+                    btn.classList.add('btn-success');
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="bi bi-cart-plus me-2"></i>Agregar al carrito';
+                        btn.classList.remove('btn-success');
+                    }, 2000);
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html> 

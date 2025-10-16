@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - PetShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-lg">
+        <div class="container">
+            <a href="../index.html" class="navbar-brand d-flex align-items-center gap-2 fs-2 fw-bold text-primary">
+                <i class="bi bi-heart-fill text-danger"></i>PetShop
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="../nav/perro.html">Perros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-4 py-2 rounded-pill hover-effect" href="../nav/gato.html">Gatos</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-4">
+                    <form class="search-form d-none d-md-block">
+                        <div class="input-group">
+                            <input type="search" class="form-control border-0 rounded-start-pill shadow-sm" placeholder="Buscar productos..." aria-label="Buscar" style="background: rgba(255,255,255,0.9);">
+                            <button class="btn btn-primary rounded-end-pill shadow-sm" type="submit">
+                                <i class="bi bi-search text-white"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle fw-semibold rounded-pill px-4" type="button" data-bs-toggle="dropdown" style="border: 2px solid var(--primary-color);">
+                            <i class="bi bi-person-circle me-2"></i>Mi cuenta
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0">
+                            <li><a class="dropdown-item" href="../nav/iniciar-sesion.html"><i class="bi bi-box-arrow-in-right me-2"></i>Iniciar sesión</a></li>
+                            <li><a class="dropdown-item" href="../nav/crear-cuenta.html"><i class="bi bi-person-plus me-2"></i>Crear cuenta</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary position-relative fw-semibold rounded-pill px-4 shadow-sm" id="cartButton">
+                        <i class="bi bi-cart3 me-2 text-white"></i>Carrito
+                        <span class="position-absolute top-0 start-100 translate-middle badge cart-badge bg-danger rounded-pill">
+                            0
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container my-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h1 class="fw-bold mb-4 mt-5 text-center">
+                    <i class="bi bi-lock text-primary me-2"></i>Política de Privacidad
+                </h1>
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3"><i class="bi bi-person-badge me-2"></i>1. ¿Quién es el responsable de tus datos?</h2>
+                            <p>PetShop S.L. es responsable del tratamiento de tus datos personales. Puedes contactar con nosotros en privacidad@petshop.es o en la dirección Calle de las Mascotas, 123, 28001 Madrid, España.</p>
+                        </section>
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3"><i class="bi bi-database me-2"></i>2. ¿Qué datos personales recogemos?</h2>
+                            <ul class="ms-3">
+                                <li>Datos identificativos (nombre, apellidos, email, dirección, teléfono, DNI/NIE)</li>
+                                <li>Datos de navegación (IP, cookies, páginas visitadas, dispositivo, navegador)</li>
+                                <li>Datos de compra y pago (productos adquiridos, historial de pedidos, método de pago)</li>
+                                <li>Preferencias y comunicaciones</li>
+                            </ul>
+                        </section>
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3"><i class="bi bi-gear me-2"></i>3. ¿Para qué usamos tus datos?</h2>
+                            <ul class="ms-3">
+                                <li>Gestionar tu cuenta y pedidos</li>
+                                <li>Atender consultas y reclamaciones</li>
+                                <li>Enviar comunicaciones comerciales (si lo autorizas)</li>
+                                <li>Mejorar nuestros servicios y personalizar tu experiencia</li>
+                                <li>Cumplir obligaciones legales</li>
+                            </ul>
+                        </section>
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3"><i class="bi bi-shield-check me-2"></i>4. ¿Cuál es la base legal para el tratamiento?</h2>
+                            <ul class="ms-3">
+                                <li>Ejecución de un contrato (compra, registro, atención al cliente)</li>
+                                <li>Consentimiento (envío de promociones, uso de cookies no necesarias)</li>
+                                <li>Obligación legal (facturación, fiscalidad, protección de datos)</li>
+                                <li>Interés legítimo (mejora de servicios, prevención de fraude)</li>
+                            </ul>
+                        </section>
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3"><i class="bi bi-share me-2"></i>5. ¿Con quién compartimos tus datos?</h2>
+                            <ul class="ms-3">
+                                <li>Proveedores de servicios (logística, pagos, hosting, soporte técnico)</li>
+                                <li>Autoridades públicas cuando sea legalmente necesario</li>
+                                <li>No vendemos tus datos a terceros</li>
+                            </ul>
+                        </section>
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3"><i class="bi bi-clock me-2"></i>6. ¿Cuánto tiempo conservamos tus datos?</h2>
+                            <ul class="ms-3">
+                                <li>Datos de cuenta: mientras seas cliente o hasta que solicites su supresión</li>
+                                <li>Datos de compra: 6 años (obligación fiscal)</li>
+                                <li>Datos de marketing: hasta que retires tu consentimiento</li>
+                                <li>Datos de navegación: máximo 2 años</li>
+                            </ul>
+                        </section>
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3"><i class="bi bi-person-check me-2"></i>7. ¿Cuáles son tus derechos?</h2>
+                            <ul class="ms-3">
+                                <li>Acceso: saber qué datos tenemos sobre ti</li>
+                                <li>Rectificación: corregir datos inexactos</li>
+                                <li>Supresión: solicitar el borrado de tus datos</li>
+                                <li>Oposición: oponerte a ciertos tratamientos</li>
+                                <li>Limitación: restringir el uso de tus datos</li>
+                                <li>Portabilidad: recibir tus datos en formato electrónico</li>
+                            </ul>
+                            <p>Puedes ejercer estos derechos escribiendo a <strong>privacidad@petshop.es</strong> o a nuestra dirección postal. Si no estás conforme, puedes reclamar ante la Agencia Española de Protección de Datos (AEPD).</p>
+                        </section>
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3"><i class="bi bi-cookie me-2"></i>8. Política de Cookies</h2>
+                            <p>Utilizamos cookies técnicas, de análisis y de personalización. Puedes configurar tu navegador para rechazarlas, aunque algunas son necesarias para el funcionamiento de la web. Consulta nuestra política de cookies para más información.</p>
+                        </section>
+                        <section class="mb-5">
+                            <h2 class="h4 text-primary mb-3"><i class="bi bi-shield-lock me-2"></i>9. Seguridad de tus datos</h2>
+                            <ul class="ms-3">
+                                <li>Comunicaciones cifradas (SSL/TLS)</li>
+                                <li>Acceso restringido a personal autorizado</li>
+                                <li>Copias de seguridad y medidas técnicas de protección</li>
+                            </ul>
+                        </section>
+                        <section class="mb-4">
+                            <h2 class="h4 text-primary mb-3"><i class="bi bi-arrow-clockwise me-2"></i>10. Cambios en la política de privacidad</h2>
+                            <p>Podemos modificar esta política para adaptarla a cambios legales o de funcionamiento. Te avisaremos de los cambios importantes en la web o por email.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer mejorado -->
+    <footer class="pt-5 pb-3 bg-dark text-white mt-5 border-top border-3 border-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Información</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="mi-cuenta.html" class="social-link text-white-50"><i class="bi bi-person me-2"></i>Mi cuenta</a></li>
+                        <li><a href="formas-pago.html" class="social-link text-white-50"><i class="bi bi-credit-card me-2"></i>Formas de pago</a></li>
+                        <li><a href="gastos-envio.html" class="social-link text-white-50"><i class="bi bi-truck me-2"></i>Gastos de envío</a></li>
+                        <li><a href="devoluciones.html" class="social-link text-white-50"><i class="bi bi-arrow-return-left me-2"></i>Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-share me-2"></i>Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://es-es.facebook.com/" class="social-link text-white-50">
+                                <i class="bi bi-facebook me-2 text-primary"></i>Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" class="social-link text-white-50">
+                                <i class="bi bi-instagram me-2 text-danger"></i>Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/" class="social-link text-white-50">
+                                <i class="bi bi-twitter me-2 text-info"></i>Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" class="social-link text-white-50">
+                                <i class="bi bi-youtube me-2 text-danger"></i>YouTube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-building me-2"></i>Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="quienes-somos.html" class="social-link text-white-50"><i class="bi bi-people me-2"></i>Quiénes somos</a></li>
+                        <li><a href="nuestras-marcas.html" class="social-link text-white-50"><i class="bi bi-award me-2"></i>Nuestras marcas</a></li>
+                        <li><a href="aviso-legal.html" class="social-link text-white-50"><i class="bi bi-shield-check me-2"></i>Aviso legal</a></li>
+                        <li><a href="privacidad.html" class="social-link text-white-50"><i class="bi bi-lock me-2"></i>Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center border-top border-secondary pt-4 mt-4">
+                <p class="mb-0">
+                    <i class="bi bi-heart-fill text-danger me-1"></i>
+                    &copy; <span id="year"></span> PetShop. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
